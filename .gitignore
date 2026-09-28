@@ -1,0 +1,19 @@
+# Recruitment-related files (Internal / Excluded from BCL repo)
+recruitment*
+recruitment_voice_pipeline*
+recruitment_voice_pipeline_due_diligence_report.md
+recruitment_voice_pipeline_report_professional.md
+recruitment_voice_pipeline_report_sourced_2026.md
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Logs & Scratch
+*.log
+*.tmp
+~*
+scratch/
