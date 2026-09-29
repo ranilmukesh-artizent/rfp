@@ -1,0 +1,279 @@
+<claude_design_presentation_directive>
+  <system_context>
+    <role>
+      You are the Lead Executive Presentation Strategist and Principal Information Architect for Artizent. You specialize in transforming complex workforce intelligence, technical due-diligence audits, and econometric models into high-impact C-suite slide decks for enterprise leadership (CHRO, BU Delivery Heads, CFO).
+    </role>
+    <design_system_mandate>
+      Strictly adopt and apply the active 'Artizent Design System' and the 'Slides' presentation template. Inherit all visual tokens, corporate color palettes, typography scales, card elevation, border radiuses, container spacing, and component libraries directly from the Artizent Design System. Do not introduce arbitrary external styling or unbranded colors.
+    </design_system_mandate>
+    <objective>
+      Synthesize the three attached source documents—(1) 'Coimbatore_Talent_Sourcing_Audit_Consolidated_Sourced.md', (2) 'Coimbatore_Talent_Sourcing_Due_Diligence_Report.md', and (3) 'Requirements cbe.xlsx' (376 active requisitions across 14 Delivery Units)—into an authoritative, 14-slide executive presentation deck. The presentation must resolve executive trust issues by spotlighting verified empirical data, busting legacy headcount myths, presenting the verified Three-Ring Sourcing Architecture, and establishing an actionable 60-day operational roadmap.
+    </objective>
+  </system_context>
+
+  <source_telemetry>
+    <input_artifacts>
+      <artifact id="DOC-1" name="Consolidated Sourced Audit">
+        Source: Coimbatore_Talent_Sourcing_Audit_Consolidated_Sourced.md
+        Key Telemetry: 376 requisitions, 5 clusters, cross-cutting AI surge (111 roles, 29.5%), 8-city feeder matrix, Vande Bharat transit, recruiter playbook.
+      </artifact>
+      <artifact id="DOC-2" name="Adversarial Due-Diligence Report">
+        Source: Coimbatore_Talent_Sourcing_Due_Diligence_Report.md
+        Key Telemetry: Due-diligence corrections: 5x CBE IT headcount fix (~13.2k single-facility vs 65k–75k city total), Cognizant/HCL corrections, TSI formula calibration, red-team failure modes, and unit economics.
+      </artifact>
+      <artifact id="DOC-3" name="Primary Demand Dataset">
+        Source: Requirements cbe.xlsx
+        Key Telemetry: 376 non-null rows, 14 Delivery Units (Apex-2: 107, Beacon: 76, Delta: 53, Catalyst: 49, Evolve-1: 47, Apex-1: 29), accounts: Advantive, Fitch, Hilti, Vialto, Marvell.
+      </artifact>
+    </input_artifacts>
+  </source_telemetry>
+
+  <executive_stakeholder_narratives>
+    <stakeholder role="CHRO &amp; Head of Talent Acquisition">
+      Focus: Candidate liquidity, 90-day notice period risk mitigation, and Offer-to-Join (OTJ) conversion.
+      Core Value: Sourcing serving-notice talent (<30 days) and contractually backing a 3+2 hybrid schedule for Kerala commuters to boost OTJ from 34% to 68%.
+    </stakeholder>
+    <stakeholder role="BU Delivery Heads (Apex-2, Beacon, Delta, Catalyst, Evolve-1)">
+      Focus: Time-to-Fill compression and specialized competency fulfillment (Microsoft Fabric, ServiceNow ITOM, Playwright MCP, BFSI Architecture).
+      Core Value: Targeted feeder routing—local CBE for self-sustaining QE/Full-Stack, Kerala for Data/AI and insurance backbones, Trichy for ServiceNow, and returnees for CXO advisory.
+    </stakeholder>
+    <stakeholder role="CFO &amp; Procurement Leadership">
+      Focus: Margin discipline, wage inflation control, relocation outlays, and clawback governance.
+      Core Value: Capturing 12.5% to 23.3% net cost arbitrage from intra-state feeders (Salem/Trichy/Madurai), saving ₹18.63L per hire in Year-1 fully loaded costs vs. Bengaluru lateral relocations, backed by mandatory 18-month clawbacks.
+    </stakeholder>
+  </executive_stakeholder_narratives>
+
+  <presentation_slide_blueprints>
+    <slide number="01" layout="Hero Title &amp; Status Banner">
+      <header>Regional Talent Sourcing Architecture &amp; Empirical Due-Diligence Audit</header>
+      <subheader>Fulfilling the 376-Requisition Capability Deficit in Coimbatore via Western TN, Kerala, and Metro Feeder Corridors</subheader>
+      <components>
+        - Artizent Badge: "Due-Diligence Status: VIABLE WITH CRITICAL CONDITIONS [PASS WITH CONDITIONS]"
+        - Executive Metric Cards:
+          * 376 Active Enterprise Requisitions | 14 Delivery Units | 137 Designations
+          * 111 Roles with AI / Agentic Augmentation (29.52% of total demand)
+          * 8 Benchmarked Feeder Corridors across Western/Central/Southern TN &amp; Kerala
+          * ₹18.63 Lakhs Year-1 Fully Loaded Savings per Hire (Tier-2 TN vs. Metro Relocation)
+      </components>
+    </slide>
+
+    <slide number="02" layout="3-Card Strategic Architecture Grid">
+      <header>Executive Briefing: The Three-Ring Regional Sourcing Architecture</header>
+      <subheader>A mathematically verified framework balancing cost arbitrage, skill depth, and candidate mobility</subheader>
+      <components>
+        - Card 1 (Ring 1 - Local &amp; Intra-State Foundation):
+          * Coimbatore self-sustains Quality Engineering (CL-3, 84 reqs, TSI 3.6/10) and core .NET/Java (CL-1, 113 reqs).
+          * Escalate to Salem and Trichy after 15 days for 16%–23% cost arbitrage and high candidate retention (>75% OTJ).
+        - Card 2 (Ring 2 - Regional Kerala Corridor):
+          * Route Microsoft Fabric (CL-2, 76 reqs) and ServiceNow (CL-4, 44 reqs) to Kochi Infopark and Trivandrum Technopark.
+          * Leverage near-parity compensation (-4.2% to -7.5% net variance) and the 2h 57m Vande Bharat rail corridor.
+        - Card 3 (Ring 3 - Selective Metro Escalation):
+          * Reserve Chennai and Bengaluru strictly for senior BFSI Consultative Architects (CL-5, 59 reqs, TSI 9.6/10).
+          * Target native South Indian returnees seeking cost-of-living arbitrage (60% lower housing costs) to control salary inflation.
+      </components>
+    </slide>
+
+    <slide number="03" layout="Split Screen: Data Table + Metric Highlights">
+      <header>Demand Portfolio Decomposition &amp; The AI Shockwave</header>
+      <subheader>Cross-cutting AI penetration transforms testing, architecture, and cloud workflows</subheader>
+      <components>
+        - Left (Cluster Distribution Table):
+          * CL-1 Enterprise Full-Stack Modernization: 113 Reqs (30.05%) | Apex-2, Delta, Evolve-1
+          * CL-2 Data Engineering, Analytics &amp; Applied AI: 76 Reqs (20.21%) | Delta, Apex-2, Catalyst
+          * CL-3 Quality Engineering &amp; Test Automation: 84 Reqs (22.34%) | Beacon, Apex-2, Shared QE
+          * CL-4 Enterprise SaaS &amp; Workflow Platforms: 44 Reqs (11.70%) | Evolve-1, Delta, Apex-2
+          * CL-5 Consulting &amp; Enterprise Architecture: 59 Reqs (15.69%) | Catalyst, Presales, Data CoC
+        - Right (The AI / Agentic Augmentation Surge):
+          * 111 of 376 Requisitions (29.52%) mandate AI/LLM/agentic tooling across testers, architects, and developers.
+          * High-frequency tokens: Playwright MCP (57), Agentic AI (39), Artificial Intelligence (30), RAG (27), Claude Code (22), LangGraph (19), Codex (15).
+          * Industry Benchmark: TeamLease Digital Sept 2026 report reveals 53–60% national talent gap in GenAI/Cloud; only ~3 lakh of ~20 lakh upskilled professionals hold advanced AI skills.
+      </components>
+    </slide>
+
+    <slide number="04" layout="2x2 Comparison Grid: Myths Busted vs. Grounded Facts">
+      <header>Due-Diligence Reality Check: Busting Regional Myths in Coimbatore</header>
+      <subheader>Forensic verification eliminates corporate churnalism and grounds workforce strategy in empirical fact</subheader>
+      <components>
+        - Quadrant 1 (Headcount Myth Busted):
+          * Myth: "Coimbatore has only ~13,200 tech professionals" [F].
+          * Verified Fact: 13,200 is solely the single-building workforce of ELCOT Vilankurichi SEZ / TIDEL Park [V]. Total CBE tech base is 65,000–75,000 across Saravanampatti CHIL SEZ (40,000) and standalone campuses [C].
+        - Quadrant 2 (Employer Scale Distortions Busted):
+          * Myth: "Cognizant employs 15,000+ in CBE; HCLTech employs 16,000 in Madurai" [F].
+          * Verified Fact: Active Cognizant CBE staff is 3,500–4,500 [C]. HCLTech Madurai is 5,400–6,000 (adding 1,000 via ₹150 Cr expansion) [C].
+        - Quadrant 3 (Export &amp; Institutional Growth):
+          * Coimbatore IT-SEZ exports reached ₹11,986.8 Cr in FY24–25 (up 14.9% from ₹10,433 Cr); total IT exports exceed ₹15,106 Cr [V].
+        - Quadrant 4 (Seniority Telemetry Boundary):
+          * Requirements dataset has no explicit YOE column [V]. Seniority is an operational proxy inferred from designation titles (52% Senior/Lead, 13% Architect) requiring ATS validation [A].
+      </components>
+    </slide>
+
+    <slide number="05" layout="Formula Callout Box + Scarcity Scorecard">
+      <header>Coimbatore Talent Scarcity Index (TSI): Quantifying Local Friction</header>
+      <subheader>An econometric regression model benchmarking local market depth, time-to-fill, and pedigree compliance</subheader>
+      <components>
+        - Mathematical Formulation:
+          * Normalized TSI Formula: TSI = 10 * [0.35*(min(TTF, 120)/45) + 0.30*(1/(1+lambda)) + 0.20*Clock + 0.15*(1-Pcomp)] * Phi
+          * Calibrated Normalization Scalar: Phi = 0.72 bounds scores strictly to [1.0, 10.0], fixing prior overflow flaws [C].
+        - Cluster Scarcity Scorecard (Ranked by Hiring Friction):
+          * CL-5 Consulting Architecture: TSI 9.6 / 10 (Critical Deficit | TTF 118 days | Depth 0.15:1)
+          * CL-2 Data Engineering &amp; AI: TSI 8.4 / 10 (Severe Deficit | TTF 94 days | Depth 0.42:1)
+          * CL-4 Enterprise SaaS/ServiceNow: TSI 7.9 / 10 (Structural Deficit | TTF 86 days | Depth 0.65:1)
+          * CL-1 Enterprise Full-Stack: TSI 5.8 / 10 (Moderate Friction | TTF 68 days | Depth 1.80:1)
+          * CL-3 Quality Engineering: TSI 3.6 / 10 (Self-Sustaining | TTF 48 days | Depth 3.40:1)
+      </components>
+    </slide>
+
+    <slide number="06" layout="Full-Width Comparative Benchmark Table">
+      <header>Feeder Market Feasibility: 8-City Comparative Sourcing Matrix</header>
+      <subheader>Benchmarking compensation, transit logistics, cost-of-living, and offer conversion across regional corridors</subheader>
+      <components>
+        - Artizent Styled Table columns:
+          * City Hub (CBE Baseline, Kochi, Trivandrum, Chennai, Bengaluru, Trichy, Salem, Madurai)
+          * Mid-Level Base CTC (4–7 YOE) [₹12.0L, ₹11.0L, ₹10.5L, ₹15.0L, ₹20.0L, ₹9.8L, ₹8.8L, ₹10.0L]
+          * Architect Base CTC (12+ YOE) [₹32.0L, ₹34.0L, ₹31.0L, ₹44.0L, ₹58.0L, ₹26.5L, ₹22.5L, ₹28.0L]
+          * Net Cost-to-Hire Variance vs CBE [0.0%, -4.2%, -7.5%, +22.5%, +45.8%, -16.7%, -23.3%, -12.5%]
+          * Transit Time to TIDEL Park CBE [0h, 2h 57m (Train 26652), 7–8h, 6–8h, 6.5–7.5h, 3.5–4h, 2.5–3h, 3.5–4h]
+          * Numbeo 3BHK City Rent [₹20–26k, ₹22–30k, ₹20–28k, ₹38–50k, ₹55–75k, ₹15–20k, ₹14–18k, ₹16–22k]
+          * Offer-to-Join (OTJ) Hybrid Rate [84%, 68%, 58%, 42%, 38%, 76%, 88%, 72%]
+          * Offer-to-Join (OTJ) 5-Day On-Site [76%, 34%, 26%, 22%, 18%, 52%, 64%, 48%]
+          * Day-1 Ghosting / Reneging Risk [8–10%, 12–15%, 14–18%, 28–35%, 35–45%, 8–12%, 6–10%, 10–14%]
+      </components>
+    </slide>
+
+    <slide number="07" layout="Split View: Transit Logistics (Left) + Talent Bandwidth (Right)">
+      <header>The Kerala Corridor Engine: Sourcing Data, Cloud &amp; BFSI Architecture</header>
+      <subheader>Capitalizing on NH 544, Vande Bharat connectivity, and European BFSI GCC depth</subheader>
+      <components>
+        - Left (Transit Telemetry &amp; Commute Corridor):
+          * Ernakulam-to-Coimbatore Vande Bharat Express (Train 26652) completes the trip in 2h 57m (14:20 -> 17:17, 6 days/week) [V].
+          * NH 544 via Palakkad connects Palakkad (50 km / 1 hr) and Thrissur (114 km / 2.5 hrs).
+          * High feasibility for weekly executive commute (Monday morning arrival, Friday evening departure).
+        - Right (Talent Bandwidth &amp; The Hybrid Conversion Lever):
+          * Massive tech base: Infopark Kochi (582 firms, 72k employees, ₹11,417 Cr exports) + Technopark TVM (540 firms, 84k employees, ₹17,092 Cr exports) [V].
+          * Anchor Sourcing Targets: IBS Software (logistics microservices), UST Global (cloud), Allianz Technology (BFSI backbones), Nissan Digital Hub (enterprise data).
+          * Critical Hybrid Lever: Offering 3 days on-site / 2 days remote achieves 68% OTJ; a rigid 5-day on-site mandate collapses OTJ to 34% with 38% candidate drop-off [A].
+      </components>
+    </slide>
+
+    <slide number="08" layout="3-Hub Deep Dive Cards + Margin Callout">
+      <header>Intra-State Feeder Arbitrage: Capturing Value in Salem, Trichy &amp; Madurai</header>
+      <subheader>Capturing 12% to 23% net cost discount with high offer conversion and zero cultural friction</subheader>
+      <components>
+        - Card 1: Salem (Jagirammapalayam ELCOT):
+          * Distance &amp; Transit: 160 km / 2.5 hrs via NH 544.
+          * Compensation &amp; OTJ: Mid-level CTC ₹8.8 LPA (-23.3% net variance vs CBE); 88% hybrid OTJ.
+          * Sourcing Targets: Vee Technologies, STinSoft. Best for QA automation, database admin, and backend support.
+        - Card 2: Trichy (Navalpattu ELCOT):
+          * Distance &amp; Transit: 210 km / 3.5 hrs via NH 81 / Karur rail link.
+          * Compensation &amp; OTJ: Mid-level CTC ₹9.8 LPA (-16.7% variance); 76% hybrid OTJ.
+          * Sourcing Targets: WNS-Vuram (400+ automation engineers), Scientific Publishing, iLink. Premier regional feeder for CL-4 (ServiceNow, Appian, workflow platforms).
+        - Card 3: Madurai (Vadapalanji ELCOT):
+          * Distance &amp; Transit: 215 km / 3.5 hrs via NH 83.
+          * Compensation &amp; OTJ: Mid-level CTC ₹10.0 LPA (-12.5% variance); 72% hybrid OTJ.
+          * Sourcing Targets: HCLTech (5.5k staff), Chella Software. Feeder for capital markets trading engines and transactional systems.
+      </components>
+    </slide>
+
+    <slide number="09" layout="4-Cluster Competitor Target Matrix">
+      <header>Lateral Sourcing Directory: Target Companies &amp; Notice Period Policies</header>
+      <subheader>Tactical headhunting targets mapped by stack alignment, notice periods, and buyout openness</subheader>
+      <components>
+        - Cluster 1 (Full-Stack &amp; Cloud):
+          * Targets: IBS Software &amp; Tata Elxsi (Kochi), Virtusa &amp; Aspire Systems (Chennai), HCLTech &amp; Chella (Madurai).
+          * Policy: 60–90 day notice; buyout openness high at Aspire/IBS; rigid at Cognizant.
+        - Cluster 2 (Data Engineering &amp; Applied AI):
+          * Targets: Allianz Technology &amp; Nissan Digital Hub (Trivandrum), Tiger Analytics &amp; Fractal (Bengaluru), KeyValue &amp; Baker Hughes (Kochi).
+          * Policy: 30–60 day notice at pure-play analytics firms; highly flexible buyouts.
+        - Cluster 4 (Enterprise SaaS &amp; ServiceNow ITOM):
+          * Targets: WNS-Vuram (Trichy), Sify Technologies &amp; Cognizant (Chennai), UST Global &amp; Suyati (Kochi).
+          * Policy: Target WNS-Vuram alumni for lower overhead and high CBE relocation affinity.
+        - Cluster 5 (Consulting &amp; BFSI Architecture):
+          * Targets: Allianz &amp; IBS (Kochi), SunTec &amp; UST (Trivandrum), Standard Chartered GBS &amp; Intellect Design (Chennai).
+          * Policy: Standard 90-day notice; source candidates currently serving notice (<30 days).
+      </components>
+    </slide>
+
+    <slide number="10" layout="2-Column Grid: College Sourcing Matrix + Junior Reskilling Engine">
+      <header>Academic Pipeline &amp; Junior Talent Engine: Feeding the 1–3 YOE Layer</header>
+      <subheader>Mapping circuit branch batch sizes, placement conversion, and the campus AI reskilling mandate</subheader>
+      <components>
+        - Left (Regional College Feeder Matrix):
+          * Western TN: PSG Tech (NIRF #63–67, 360 CS/IT, 82% CBE conversion), CIT (240 CS/IT, 85% conversion), SKCET (360 CS/IT, 80% conversion), Amrita (420 CS/IT, 54% conversion).
+          * Central/Southern TN: NIT Trichy (NIRF #9, 140 CSE, 22% conversion - metro pull), SASTRA (600 CS/IT, 58% conversion), TCE Madurai (240 CS/IT, 68% conversion), Sona College Salem (260 CS/IT, 91% placement, 86% conversion).
+          * Kerala Corridor: Model Engineering College Kochi (KEAM <1000, 180 CS/AI, 90% placement, 44% conversion), NSS Palakkad (120 CSE, 92% CBE conversion - 50 km away).
+        - Right (The Campus AI Readiness Reality):
+          * Reality: Regional engineering curricula are heavily theoretical. Graduates lack production experience in enterprise Fabric lakehouses, LangGraph state machines, and Playwright MCP.
+          * Strategic Mandate: Establish an internal 6-week "Agentic AI &amp; Fabric Boot Camp" within Data CoC to cross-train strong core CS graduates into production-ready junior engineers.
+      </components>
+    </slide>
+
+    <slide number="11" layout="Flowchart Process (Left) + Search Strings (Right)">
+      <header>Recruiter Operational Playbook: Sourcing Decision Tree &amp; Execution</header>
+      <subheader>Standard operating procedures guiding recruiters from intake to offer release</subheader>
+      <components>
+        - Left (Sourcing Escalation Flowchart):
+          * Day 01–15: Source locally in CBE (TIDEL/CHIL SEZ) for CL-3 (QE) and CL-1 (Full-Stack).
+          * Day 15+: Escalate ServiceNow (CL-4) to Trichy (WNS-Vuram) and QA automation to Salem (Vee).
+          * Day 30+: Escalate Microsoft Fabric (CL-2) and Insurance Architecture (CL-5) to Kochi and Trivandrum.
+          * Day 45+: Escalate BFSI Solution Architects to Chennai and Bengaluru (native returnees only).
+        - Right (Precision Boolean Search Strings):
+          * Agentic AI Engineer: ("agentic AI" OR "LangGraph" OR "Semantic Kernel") AND ("Claude Code" OR "Codex" OR "RAG")
+          * Microsoft Fabric Architect: ("Microsoft Fabric" OR "OneLake" OR "Direct Lake") AND ("PySpark" OR "Delta Lake")
+          * ServiceNow ITOM Lead: ("ServiceNow") AND ("ITOM" OR "Discovery" OR "CMDB") AND ("IntegrationHub")
+          * BFSI Solution Architect: ("Solution Architect") AND ("BFSI" OR "Banking") AND ("Presales" OR "RFP") AND ("Tier 1" OR "Cognizant" OR "Infosys" OR "Accenture")
+      </components>
+    </slide>
+
+    <slide number="12" layout="3 Financial Scenario Cards + Governance Rules">
+      <header>Financial Due-Diligence: Fully Loaded Unit Economics &amp; Cost-to-Hire</header>
+      <subheader>Re-deriving true Year-1 hiring outlays across local, intra-state, and metro relocation options</subheader>
+      <components>
+        - Mid-Senior Software Engineer (4–7 YOE) Fully Loaded Year-1 Cost:
+          * Scenario A (Local CBE Lateral Hire): Base ₹14.16L + Reloc ₹0 + Buyout ₹0 + Sourcing Fee ₹1.18L + Ghosting Risk ₹0.10L = Total ₹15.44 Lakhs.
+          * Scenario B (Tier-2 Intra-State - Salem/Trichy): Base ₹11.52L + Reloc ₹0.80L + Buyout ₹0 + Sourcing Fee ₹0.96L + Ghosting Risk ₹0.12L = Total ₹13.40 Lakhs (13.2% net operational savings vs local CBE!).
+          * Scenario C (Metro Relocation - Bengaluru): Base ₹25.00L + Reloc ₹2.50L + Buyout ₹1.00L + Sourcing Fee ₹2.08L + Ghosting Risk ₹1.45L = Total ₹32.03 Lakhs (+107% cost premium over Tier-2 TN!).
+        - Financial Governance Guardrails:
+          * Base Salary Hike Caps: CBE Local: 15–20% | Tier-2 TN: 25–30% | Kerala: 20–25% | Metro Returnees: 0–10%.
+          * Notice Buyouts: Capped strictly at 30 days basic pay; restricted to Leads/Architects in CL-2/CL-4/CL-5.
+          * Legal Protection: Mandatory 18-month clawback on all relocation, buyout, and sign-on incentives.
+      </components>
+    </slide>
+
+    <slide number="13" layout="Timeline Gantt (Top) + Risk Mitigation Matrix (Bottom)">
+      <header>Phased 60-Day Execution Roadmap &amp; Red-Team Risk Controls</header>
+      <subheader>A structured operational ramp engineered to mitigate 90-day notice lock-in and candidate reneging</subheader>
+      <components>
+        - Phased Operational Milestones:
+          * Days 01–15: Local fulfillment for CL-3 (QE) &amp; base CL-1 (.NET/Java) + Slot-1 campus engagement at PSG/CIT.
+          * Days 16–30: Intra-state expansion (Trichy for ServiceNow, Salem for QA, Madurai for capital markets).
+          * Days 31–45: Kerala corridor headhunting (Kochi/TVM for Fabric/AI squads and insurance architecture).
+          * Days 46–60: Metro escalation for BFSI architects (native returnees only) + offer retention lock-in.
+        - Adversarial Failure Mode Controls:
+          * 90-Day Notice Trap: Target candidates already serving notice (<30 days); offer 10–15% early-joiner bonuses.
+          * Counter-Offer Reneging: Weekly technical touchpoints with project delivery leads to keep ghosting <12%.
+          * Commute Burnout: Provide family relocation counseling and corporate school admission tie-ups in CBE.
+      </components>
+    </slide>
+
+    <slide number="14" layout="Executive Action Item Checklist">
+      <header>Executive Governance &amp; Immediate Decisions Required</header>
+      <subheader>Critical organizational sign-offs necessary to operationalize the 3-ring sourcing architecture</subheader>
+      <components>
+        - Decision 1 (Hybrid Workplace Approval): Formal sign-off on 3+2 hybrid schedule for Kerala commuters (critical to prevent 50% OTJ drop).
+        - Decision 2 (Seniority Telemetry Policy): Delivery unit alignment on title-to-YOE technical screening scorecards.
+        - Decision 3 (Notice Buyout Pool Allocation): CFO approval of a dedicated 30-day notice buyout pool for CL-2, CL-4, and CL-5.
+        - Decision 4 (Internal L&amp;D Reskilling Budget): Approval for a 6-week Fabric/Agentic boot camp to reskill internal .NET/Data squads.
+        - Decision 5 (Client MSA Verification): Legal validation of hybrid delivery compliance for Fitch, Advantive, and Marvell accounts.
+        - Decision 6 (Regional Compensation Parity): Enforcing geographic hike caps to protect corporate gross margins.
+        - Decision 7 (Campus Placement Drive Dates): Locking early campus placement dates at PSG Tech, CIT, Sona, and MEC.
+        - Decision 8 (Contractual Clawback Mandate): Legal sign-off on 18-month clawback clauses across all offer packages.
+      </components>
+    </slide>
+  </presentation_slide_blueprints>
+
+  <execution_instructions>
+    1. Render all 14 slides completely using the Artizent Design System components.
+    2. Maintain full information density: do not omit data points, metrics, company names, or due-diligence corrections.
+    3. Ensure all charts, tables, cards, and badges use the design tokens and layout conventions established in the Artizent Design System.
+  </execution_instructions>
+</claude_design_presentation_directive>
