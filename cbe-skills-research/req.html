@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coimbatore Talent Audit & Feeder Market Sourcing Mission (req.xml)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0e17;
+      --bg-secondary: #111827;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --bg-card-hover: rgba(30, 41, 59, 0.85);
+      --bg-accent: rgba(56, 189, 248, 0.08);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(56, 189, 248, 0.3);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --cyan-bright: #38bdf8;
+      --cyan-glow: rgba(56, 189, 248, 0.25);
+      --indigo: #6366f1;
+      --emerald: #10b981;
+      --emerald-bg: rgba(16, 185, 129, 0.1);
+      --amber: #f59e0b;
+      --amber-bg: rgba(245, 158, 11, 0.1);
+      --rose: #f43f5e;
+      --rose-bg: rgba(244, 63, 94, 0.1);
+      --purple: #a855f7;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.15);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --bg-card-hover: #ffffff;
+      --bg-accent: rgba(2, 132, 199, 0.06);
+      --border-color: rgba(15, 23, 42, 0.08);
+      --border-highlight: rgba(2, 132, 199, 0.3);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      --cyan-bright: #0284c7;
+      --cyan-glow: rgba(2, 132, 199, 0.15);
+      --indigo: #4f46e5;
+      --emerald: #059669;
+      --emerald-bg: rgba(5, 150, 105, 0.08);
+      --amber: #d97706;
+      --amber-bg: rgba(217, 119, 6, 0.08);
+      --rose: #e11d48;
+      --rose-bg: rgba(225, 29, 72, 0.08);
+      --purple: #9333ea;
+      --shadow-subtle: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+      --shadow-glow: 0 0 25px rgba(2, 132, 199, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Background Ambient Gradients */
+    .ambient-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient-circle-1 {
+      position: absolute;
+      top: -15%;
+      right: 10%;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%);
+      filter: blur(80px);
+    }
+
+    .ambient-circle-2 {
+      position: absolute;
+      top: 40%;
+      left: -10%;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%);
+      filter: blur(80px);
+    }
+
+    .ambient-circle-3 {
+      position: absolute;
+      bottom: -10%;
+      right: -5%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.08), transparent 70%);
+      filter: blur(90px);
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(10, 14, 23, 0.85);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    [data-theme="light"] header {
+      background: rgba(248, 250, 252, 0.9);
+    }
+
+    .nav-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0284c7, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
+    .brand-info h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-badge {
+      font-size: 0.68rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: var(--bg-accent);
+      color: var(--cyan-bright);
+      border: 1px solid var(--border-highlight);
+      font-weight: 600;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-info p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .view-toggle {
+      display: inline-flex;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 3px;
+    }
+
+    .view-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .view-btn.active {
+      background: var(--cyan-bright);
+      color: #0a0e17;
+      box-shadow: 0 2px 8px var(--cyan-glow);
+    }
+
+    .action-btn {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.45rem 0.8rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .action-btn:hover {
+      border-color: var(--cyan-bright);
+      color: var(--cyan-bright);
+      transform: translateY(-1px);
+    }
+
+    /* Sub-nav quick anchor bar */
+    .quick-anchors {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.45rem 1.5rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      scrollbar-width: none;
+    }
+
+    .quick-anchors::-webkit-scrollbar {
+      display: none;
+    }
+
+    .anchor-chip {
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+
+    .anchor-chip:hover {
+      color: var(--cyan-bright);
+      background: var(--bg-accent);
+      border-color: var(--border-highlight);
+    }
+
+    /* Main Container */
+    main {
+      position: relative;
+      z-index: 10;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 5rem;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(30, 41, 59, 0.75));
+      border: 1px solid var(--border-highlight);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle), var(--shadow-glow);
+    }
+
+    [data-theme="light"] .hero-banner {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+    }
+
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 380px;
+      height: 100%;
+      background: radial-gradient(circle at right center, rgba(56, 189, 248, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-pretitle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--cyan-bright);
+      background: var(--bg-accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-highlight);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+      font-size: 2.15rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+      background: linear-gradient(to right, #f8fafc, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    [data-theme="light"] .hero-title {
+      background: linear-gradient(to right, #0f172a, #334155);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 950px;
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Telemetry KPI Strip */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .kpi-card {
+      background: rgba(10, 14, 23, 0.45);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      position: relative;
+    }
+
+    [data-theme="light"] .kpi-card {
+      background: rgba(241, 245, 249, 0.7);
+    }
+
+    .kpi-card:hover {
+      border-color: var(--border-highlight);
+      transform: translateY(-2px);
+    }
+
+    .kpi-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+    }
+
+    .kpi-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .kpi-sub {
+      font-size: 0.72rem;
+      color: var(--text-subtle);
+    }
+
+    /* Section Styles */
+    .section-container {
+      margin-bottom: 2.75rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+    }
+
+    .section-header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--bg-accent);
+      border: 1px solid var(--border-highlight);
+      color: var(--cyan-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .section-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .tag-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Card styling */
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-subtle);
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    [data-theme="light"] .card:hover {
+      border-color: rgba(15, 23, 42, 0.2);
+    }
+
+    /* System Directive Grid */
+    .directive-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      .directive-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .directive-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .directive-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-role-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--cyan-bright);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .directive-card p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    .directive-card strong {
+      color: var(--text-main);
+    }
+
+    .epistemic-callout {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(56, 189, 248, 0.05));
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-left: 4px solid var(--indigo);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .epistemic-header {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--indigo);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    /* Demand Clusters Section */
+    .clusters-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cluster-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.5rem;
+      display: grid;
+      grid-template-columns: 80px 1.5fr 1fr 2fr;
+      align-items: center;
+      gap: 1.25rem;
+      transition: all 0.2s ease;
+    }
+
+    @media (max-width: 1050px) {
+      .cluster-card {
+        grid-template-columns: 80px 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .cluster-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cluster-card:hover {
+      border-color: var(--border-highlight);
+      background: var(--bg-card-hover);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+    }
+
+    .cluster-id {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--cyan-bright);
+      background: var(--bg-accent);
+      padding: 0.4rem 0.6rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      border: 1px solid var(--border-highlight);
+    }
+
+    .cluster-info h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.2rem;
+    }
+
+    .cluster-volume {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .volume-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .vol-high {
+      background: var(--rose-bg);
+      color: var(--rose);
+      border: 1px solid rgba(244, 63, 94, 0.25);
+    }
+
+    .vol-med-high {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .vol-mod {
+      background: var(--emerald-bg);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .vol-special {
+      background: rgba(168, 85, 247, 0.12);
+      color: var(--purple);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .volume-meter {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      width: 140px;
+    }
+
+    [data-theme="light"] .volume-meter {
+      background: rgba(15, 23, 42, 0.08);
+    }
+
+    .volume-meter-bar {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .tech-stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tech-tag {
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    [data-theme="light"] .tech-tag {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    /* Delivery Units Showcase */
+    .du-strip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .du-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-right: 0.5rem;
+    }
+
+    .du-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      font-size: 0.83rem;
+      font-weight: 600;
+    }
+
+    [data-theme="light"] .du-badge {
+      background: #f8fafc;
+    }
+
+    .du-count {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: var(--bg-accent);
+      color: var(--cyan-bright);
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-highlight);
+    }
+
+    /* Operational Rules Grid */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .rule-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      border-top: 3px solid var(--cyan-bright);
+    }
+
+    .rule-card:nth-child(2) {
+      border-top-color: var(--rose);
+    }
+
+    .rule-card:nth-child(3) {
+      border-top-color: var(--amber);
+    }
+
+    .rule-card:nth-child(4) {
+      border-top-color: var(--emerald);
+    }
+
+    .rule-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .rule-id {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--cyan-bright);
+    }
+
+    .rule-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .rule-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Multi-shot Exemplar Comparison */
+    .exemplar-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 950px) {
+      .exemplar-comparison {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .exemplar-card {
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .exemplar-rejected {
+      background: rgba(244, 63, 94, 0.04);
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    .exemplar-accepted {
+      background: rgba(16, 185, 129, 0.05);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .exemplar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      width: fit-content;
+    }
+
+    .badge-rejected {
+      background: var(--rose-bg);
+      color: var(--rose);
+      border: 1px solid rgba(244, 63, 94, 0.35);
+    }
+
+    .badge-accepted {
+      background: var(--emerald-bg);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .exemplar-rationale {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      background: rgba(0, 0, 0, 0.2);
+      border-left: 3px solid;
+    }
+
+    [data-theme="light"] .exemplar-rationale {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    .exemplar-rejected .exemplar-rationale {
+      border-color: var(--rose);
+    }
+
+    .exemplar-accepted .exemplar-rationale {
+      border-color: var(--emerald);
+    }
+
+    .exemplar-body {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.65;
+      padding: 1.15rem;
+      border-radius: var(--radius-sm);
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    [data-theme="light"] .exemplar-body {
+      background: #f8fafc;
+    }
+
+    /* Workflow Phases */
+    .phases-stepper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .phase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .phase-card:hover {
+      border-color: var(--border-highlight);
+    }
+
+    .phase-header {
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    [data-theme="light"] .phase-header {
+      background: #fafafa;
+    }
+
+    .phase-header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .phase-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: var(--bg-accent);
+      color: var(--cyan-bright);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-highlight);
+    }
+
+    .phase-title-group h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .phase-content {
+      padding: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .task-item {
+      display: flex;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+    }
+
+    [data-theme="light"] .task-item {
+      background: #f8fafc;
+    }
+
+    .task-id {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan-bright);
+      background: var(--bg-accent);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      height: fit-content;
+      white-space: nowrap;
+      border: 1px solid var(--border-highlight);
+    }
+
+    .task-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Dimension Matrix in Phase 3 */
+    .dimensions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .dimension-card {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 1.15rem;
+    }
+
+    [data-theme="light"] .dimension-card {
+      background: #ffffff;
+    }
+
+    .dimension-head {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--cyan-bright);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .dimension-metrics {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .dimension-metrics li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    .dimension-metrics li::before {
+      content: '•';
+      color: var(--cyan-bright);
+      font-weight: bold;
+    }
+
+    /* Output Deliverables Sections */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .section-spec-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      position: relative;
+    }
+
+    .section-spec-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--indigo);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .section-spec-card h4 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .section-spec-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .citation-callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border-highlight);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .citation-code {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      color: var(--cyan-bright);
+      border: 1px solid var(--border-color);
+    }
+
+    [data-theme="light"] .citation-code {
+      background: #f1f5f9;
+    }
+
+    /* Raw XML View Tab */
+    .raw-xml-container {
+      display: none;
+      background: #0d1117;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 1rem;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    [data-theme="light"] .raw-xml-container {
+      background: #1e293b;
+      color: #f8fafc;
+    }
+
+    .xml-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .xml-file-info {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .xml-pre {
+      margin: 0;
+      padding: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      line-height: 1.7;
+      color: #e2e8f0;
+      overflow-x: auto;
+      max-height: 750px;
+    }
+
+    /* XML Syntax Highlighting */
+    .xml-tag {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .xml-attr-name {
+      color: #f472b6;
+    }
+
+    .xml-attr-val {
+      color: #34d399;
+    }
+
+    .xml-text {
+      color: #cbd5e1;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #0284c7;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+
+      header,
+      .ambient-bg,
+      .action-btn,
+      .view-toggle,
+      .quick-anchors {
+        display: none !important;
+      }
+
+      .card,
+      .cluster-card,
+      .rule-card,
+      .phase-card {
+        break-inside: avoid;
+        border: 1px solid #ccc !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      .hero-banner {
+        border: 1px solid #000 !important;
+        background: transparent !important;
+      }
+
+      .hero-title {
+        color: #000000 !important;
+        -webkit-text-fill-color: initial !important;
+      }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+
+  <!-- Ambient glowing backdrop -->
+  <div class="ambient-bg">
+    <div class="ambient-circle-1"></div>
+    <div class="ambient-circle-2"></div>
+    <div class="ambient-circle-3"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>Workforce Intelligence Matrix <span class="brand-badge">req.xml</span></h1>
+          <p>Coimbatore Tech Talent Audit & Feeder Market Feasibility Specification</p>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- View switchers -->
+        <div class="view-toggle">
+          <button class="view-btn active" id="btn-view-visual" onclick="switchView('visual')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Interactive View
+          </button>
+          <button class="view-btn" id="btn-view-xml" onclick="switchView('xml')">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Raw XML
+          </button>
+        </div>
+
+        <button class="action-btn" onclick="copyFullXml()" title="Copy entire req.xml to clipboard">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy XML
+        </button>
+
+        <button class="action-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle Light / Dark mode">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            id="theme-icon">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Anchor Links -->
+    <div class="quick-anchors" id="quick-anchors">
+      <a href="#system-directive" class="anchor-chip">🎯 Directive & Role</a>
+      <a href="#dataset-telemetry" class="anchor-chip">📊 376 Demand Clusters</a>
+      <a href="#operational-rules" class="anchor-chip">⚖️ 4 Mandatory Rules</a>
+      <a href="#multi-shot" class="anchor-chip">🔬 Negative vs Positive Calibration</a>
+      <a href="#execution-phases" class="anchor-chip">🚀 5-Phase Workflow</a>
+      <a href="#output-specs" class="anchor-chip">📋 Deliverable Structure</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- VISUAL DASHBOARD VIEW -->
+    <div id="visual-view">
+
+      <!-- Hero Banner with Mission Overview -->
+      <section class="hero-banner">
+        <div class="hero-pretitle">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
+          </svg>
+          Research Mission Specification & Prompt Contract
+        </div>
+        <h2 class="hero-title">Coimbatore Talent Supply-Deficit Audit & Regional Feeder Sourcing Matrix</h2>
+        <p class="hero-description">
+          An empirical, econometric evaluation model designed to analyze 376 hiring requisitions in Coimbatore (CBE),
+          pinpoint structural local capability deficits, and benchmark alternative feeder hubs across Kerala (Kochi, Trivandrum),
+          Tier-1 Metros (Chennai, Bengaluru), and high-gravity Tier-2 Tamil Nadu hubs (Trichy, Salem, Madurai, or dynamically selected intra-state cities)
+          across Cost, Skill Depth, Bandwidth, and Grounded Relocation Behavior.
+        </p>
+
+        <!-- KPI Strip -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-label">Active Requisitions</span>
+            <div class="kpi-value">376 <span style="font-size: 0.9rem; color: var(--text-subtle); font-weight: 500;">/
+                439 rows</span></div>
+            <span class="kpi-sub">Filtered non-null CBE demand</span>
+          </div>
+
+          <div class="kpi-card">
+            <span class="kpi-label">Delivery Units</span>
+            <div class="kpi-value" style="color: var(--cyan-bright);">14 <span
+                style="font-size: 0.9rem; color: var(--text-subtle); font-weight: 500;">DUs</span></div>
+            <span class="kpi-sub">Apex-2, Beacon, Delta, Catalyst...</span>
+          </div>
+
+          <div class="kpi-card">
+            <span class="kpi-label">Unique Designations</span>
+            <div class="kpi-value" style="color: var(--indigo);">137</div>
+            <span class="kpi-sub">Across 5 primary clusters</span>
+          </div>
+
+          <div class="kpi-card">
+            <span class="kpi-label">Feeder Corridors</span>
+            <div class="kpi-value" style="color: var(--emerald); font-size: 1.3rem;">3 Tiers <span
+                style="font-size: 0.82rem; color: var(--text-subtle); font-weight: 500;">(KL, Metros, TN T2)</span></div>
+            <span class="kpi-sub">Kochi, TVM, BLR, MAA, Trichy, Salem, MDU</span>
+          </div>
+
+          <div class="kpi-card">
+            <span class="kpi-label">Verification Standard</span>
+            <div class="kpi-value" style="color: var(--amber); font-size: 1.35rem;">Strict DVP</div>
+            <span class="kpi-sub">Dual-Verification Protocol</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1. System Directive -->
+      <section class="section-container" id="system-directive">
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-icon">🎯</div>
+            <div>
+              <h2 class="section-title">System Directive & Epistemic Charter</h2>
+              <div class="section-subtitle">&lt;system_directive&gt; — Operational Role, Core Objective & Epistemic
+                Standards</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="directive-grid">
+          <div class="directive-card">
+            <div class="card-top">
+              <span class="card-role-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Role Persona
+              </span>
+              <span class="tag-badge"
+                style="background: var(--bg-accent); color: var(--cyan-bright);">&lt;role&gt;</span>
+            </div>
+            <p>
+              <strong>Elite Principal Workforce Intelligence Strategist & Labor Market Econometrician</strong>
+              specializing in South Indian technology corridors (Western, Central, and Southern Tamil Nadu, and Kerala). Expertise spans
+              human capital analytics, compensation benchmarking, GCC talent dynamics, engineering curriculum mapping,
+              and talent sourcing strategy.
+            </p>
+          </div>
+
+          <div class="directive-card">
+            <div class="card-top">
+              <span class="card-role-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                Mission Objective
+              </span>
+              <span class="tag-badge"
+                style="background: rgba(99, 102, 241, 0.1); color: var(--indigo);">&lt;objective&gt;</span>
+            </div>
+            <p>
+              Perform an exhaustive, empirical, end-to-end talent supply-deficit audit and regional sourcing feasibility
+              analysis based on <strong>376 hiring requisitions in Coimbatore</strong>. Identify exact technical competencies CBE
+              can fulfill locally vs. structural deficits, and deliver a mathematically grounded sourcing matrix benchmarking
+              alternative feeder markets—specifically <strong>Kochi, Trivandrum, Chennai, Bengaluru, and high-gravity Tier-2 Tamil Nadu feeder hubs (Trichy, Salem, Madurai, or dynamically selected top 2–3 intra-state cities based on skill-cluster affinity)</strong>—across <strong>Cost, Skill Depth, Bandwidth, and Relocation Behavior</strong>.
+            </p>
+          </div>
+
+          <div class="epistemic-callout full-width">
+            <div class="epistemic-header">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              &lt;epistemic_standard&gt; — Evidentiary Standards & Ground Truth
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted); line-height: 1.65;">
+              Operate with the rigorous evidentiary standards of a <strong>joint McKinsey workforce audit and a
+                Government Labor Bureau economic survey</strong>.
+              Never rely on speculative statements, marketing hype, or ungrounded city boosterism. Every empirical
+              assertion must be backed by traceable secondary sources,
+              real-world hiring patterns, and verifiable labor mobility data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Dataset Telemetry & Demand Clusters -->
+      <section class="section-container" id="dataset-telemetry">
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-icon">📊</div>
+            <div>
+              <h2 class="section-title">Dataset Telemetry & Demand Clusters</h2>
+              <div class="section-subtitle">&lt;dataset_telemetry&gt; — 376 Requisitions grouped across 5 Core
+                Capability Clusters</div>
+            </div>
+          </div>
+          <span class="tag-badge"
+            style="background: var(--bg-accent); color: var(--cyan-bright); border: 1px solid var(--border-highlight);">137
+            Unique Roles</span>
+        </div>
+
+        <div class="clusters-container">
+          <!-- Cluster 1 -->
+          <div class="cluster-card">
+            <div class="cluster-id">CL-1</div>
+            <div class="cluster-info">
+              <h3>Enterprise Full-Stack & Cloud Modernization</h3>
+              <p style="font-size: 0.78rem; color: var(--text-subtle);">Core enterprise application transformation
+                squads</p>
+            </div>
+            <div class="cluster-volume">
+              <div class="volume-pill vol-high">
+                <span>●</span> High (~30% of total)
+              </div>
+              <div class="volume-meter">
+                <div class="volume-meter-bar" style="width: 30%; background: var(--rose);"></div>
+              </div>
+            </div>
+            <div class="tech-stack-tags">
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">.NET Core</span>
+              <span class="tech-tag">Web API</span>
+              <span class="tech-tag">Event-Driven Arch</span>
+              <span class="tech-tag">Entity Framework</span>
+              <span class="tech-tag">OAuth</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">Java/Spring Boot</span>
+            </div>
+          </div>
+
+          <!-- Cluster 2 -->
+          <div class="cluster-card">
+            <div class="cluster-id">CL-2</div>
+            <div class="cluster-info">
+              <h3>Data Engineering, Analytics & Applied AI</h3>
+              <p style="font-size: 0.78rem; color: var(--text-subtle);">Modern lakehouse, GenAI and analytics
+                architecture</p>
+            </div>
+            <div class="cluster-volume">
+              <div class="volume-pill vol-med-high">
+                <span>●</span> Med-High (~20% volume)
+              </div>
+              <div class="volume-meter">
+                <div class="volume-meter-bar" style="width: 20%; background: var(--amber);"></div>
+              </div>
+            </div>
+            <div class="tech-stack-tags">
+              <span class="tech-tag">Microsoft Fabric</span>
+              <span class="tech-tag">Azure Data Services</span>
+              <span class="tech-tag">Data Modeling</span>
+              <span class="tech-tag">Data Warehousing</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Azure AI</span>
+              <span class="tech-tag">LLM Integration</span>
+              <span class="tech-tag">Claude Code</span>
+              <span class="tech-tag">Python</span>
+            </div>
+          </div>
+
+          <!-- Cluster 3 -->
+          <div class="cluster-card">
+            <div class="cluster-id">CL-3</div>
+            <div class="cluster-info">
+              <h3>Quality Engineering & Test Automation</h3>
+              <p style="font-size: 0.78rem; color: var(--text-subtle);">Continuous testing, mobile & enterprise
+                automation</p>
+            </div>
+            <div class="cluster-volume">
+              <div class="volume-pill vol-high">
+                <span>●</span> High (~22% volume)
+              </div>
+              <div class="volume-meter">
+                <div class="volume-meter-bar" style="width: 22%; background: var(--rose);"></div>
+              </div>
+            </div>
+            <div class="tech-stack-tags">
+              <span class="tech-tag">Selenium</span>
+              <span class="tech-tag">Appium</span>
+              <span class="tech-tag">Java Test Automation</span>
+              <span class="tech-tag">Mobile Testing</span>
+              <span class="tech-tag">Performance Testing</span>
+              <span class="tech-tag">Manual Functional QA</span>
+              <span class="tech-tag">Test Leads</span>
+            </div>
+          </div>
+
+          <!-- Cluster 4 -->
+          <div class="cluster-card">
+            <div class="cluster-id">CL-4</div>
+            <div class="cluster-info">
+              <h3>Enterprise SaaS & Workflow Platforms</h3>
+              <p style="font-size: 0.78rem; color: var(--text-subtle);">Workflow automation, ERP and ITSM specialists
+              </p>
+            </div>
+            <div class="cluster-volume">
+              <div class="volume-pill vol-mod">
+                <span>●</span> Moderate (~12% volume)
+              </div>
+              <div class="volume-meter">
+                <div class="volume-meter-bar" style="width: 12%; background: var(--emerald);"></div>
+              </div>
+            </div>
+            <div class="tech-stack-tags">
+              <span class="tech-tag">ServiceNow Developers</span>
+              <span class="tech-tag">ServiceNow Business Analysts</span>
+              <span class="tech-tag">ERP / B2W Support Systems</span>
+              <span class="tech-tag">Enterprise Graph</span>
+              <span class="tech-tag">Workflow Automation</span>
+            </div>
+          </div>
+
+          <!-- Cluster 5 -->
+          <div class="cluster-card">
+            <div class="cluster-id">CL-5</div>
+            <div class="cluster-info">
+              <h3>Consulting & Enterprise Architecture</h3>
+              <p style="font-size: 0.78rem; color: var(--text-subtle);">CXO advisory, solution design & strategic bids
+              </p>
+            </div>
+            <div class="cluster-volume">
+              <div class="volume-pill vol-special">
+                <span>★</span> Specialized (~16% volume)
+              </div>
+              <div class="volume-meter">
+                <div class="volume-meter-bar" style="width: 16%; background: var(--purple);"></div>
+              </div>
+            </div>
+            <div class="tech-stack-tags">
+              <span class="tech-tag">10+ YOE Solution Architecture</span>
+              <span class="tech-tag">BFSI Domain Mandatory</span>
+              <span class="tech-tag">Presales / Proposal Design</span>
+              <span class="tech-tag">CXO Advisory</span>
+              <span class="tech-tag">Tier-1 / Tier-2 Consulting Pedigree</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Delivery Units Strip -->
+        <div class="du-strip">
+          <span class="du-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              style="display:inline; margin-right:4px;">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Key Delivery Units:
+          </span>
+          <div class="du-badge">Apex-2 <span class="du-count">107 reqs</span></div>
+          <div class="du-badge">Beacon <span class="du-count">76 reqs</span></div>
+          <div class="du-badge">Delta <span class="du-count">53 reqs</span></div>
+          <div class="du-badge">Catalyst <span class="du-count">49 reqs</span></div>
+          <div class="du-badge">Evolve-1 <span class="du-count">47 reqs</span></div>
+          <div class="du-badge">Apex-1 <span class="du-count">29 reqs</span></div>
+          <div class="du-badge">Evolve-2 <span class="du-count">6 reqs</span></div>
+          <div class="du-badge">Presales <span class="du-count">2 reqs</span></div>
+        </div>
+      </section>
+
+      <!-- 3. Operational Boundaries & Anti-Bias Directives -->
+      <section class="section-container" id="operational-rules">
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-icon">⚖️</div>
+            <div>
+              <h2 class="section-title">Operational Boundaries & Anti-Bias Directives</h2>
+              <div class="section-subtitle">&lt;operational_boundaries_and_anti_bias&gt; — Non-negotiable econometric
+                rules</div>
+            </div>
+          </div>
+          <span class="tag-badge"
+            style="background: var(--rose-bg); color: var(--rose); border: 1px solid rgba(244, 63, 94, 0.3);">Mandatory
+            Rules (MR-01 to MR-04)</span>
+        </div>
+
+        <div class="rules-grid">
+          <!-- MR-01 -->
+          <div class="rule-card">
+            <div class="rule-header">
+              <span class="rule-id">MR-01</span>
+              <span class="tag-badge" style="background: var(--bg-accent); color: var(--cyan-bright);">Confidence
+                Protocol</span>
+            </div>
+            <div class="rule-title">Strict Dual-Verification Protocol (DVP)</div>
+            <p>
+              No numerical claim regarding candidate pool size, average CTC, notice period duration, or college intake
+              can be asserted based on a single speculative data point.
+              Every estimate must be cross-verified or explicitly framed with an evidentiary confidence interval (e.g.,
+              <em>"Confidence: High [verified across Naukri hiring index + AmbitionBox salary telemetry]"</em>).
+            </p>
+          </div>
+
+          <!-- MR-02 -->
+          <div class="rule-card">
+            <div class="rule-header">
+              <span class="rule-id" style="color: var(--rose);">MR-02</span>
+              <span class="tag-badge" style="background: var(--rose-bg); color: var(--rose);">Anti-Boosterism</span>
+            </div>
+            <div class="rule-title">Zero-Tolerance for City Boosterism</div>
+            <p>
+              Reject generic superlatives such as <em>"Kochi is rapidly emerging"</em>, <em>"Trichy has cheap abundant engineers"</em>, <em>"Coimbatore has a world-class talent pool"</em>, or <em>"Bengaluru has unlimited supply"</em>.
+              Quantify every market condition: provide explicit headcount estimates, active-to-passive ratios,
+              compensation brackets (INR LPA), and attrition/retention rates.
+            </p>
+          </div>
+
+          <!-- MR-03 -->
+          <div class="rule-card">
+            <div class="rule-header">
+              <span class="rule-id" style="color: var(--amber);">MR-03</span>
+              <span class="tag-badge" style="background: var(--amber-bg); color: var(--amber);">Behavioral
+                Modeling</span>
+            </div>
+            <div class="rule-title">Grounded Relocation Behavioral Modeling</div>
+            <p>
+              Do not assume candidates will relocate simply because a job exists. Relocation feasibility must be modeled through geo-economic realities: commute corridors (Kerala-CBE connectivity via NH 544 &amp; Southern Railway Palakkad division; Central/West TN corridors such as Salem-CBE via NH 544, Trichy-CBE via NH 81 / Karur rail link, and Madurai-CBE via NH 83),
+              cost-of-living differentials, cultural/linguistic overlap, family stability factors, and historical
+              offer-to-join (OTJ) ratios.
+            </p>
+          </div>
+
+          <!-- MR-04 -->
+          <div class="rule-card">
+            <div class="rule-header">
+              <span class="rule-id" style="color: var(--emerald);">MR-04</span>
+              <span class="tag-badge" style="background: var(--emerald-bg); color: var(--emerald);">Evidentiary
+                Proof</span>
+            </div>
+            <div class="rule-title">Proof-by-Quote & Sourcing Evidence</div>
+            <p>
+              For market assertions, cite specific industry entities, technological parks (Infopark Phase 1/2,
+              Technopark, TIDEL Park CBE, Siruseri SIPCOT, ELCOT IT Parks in Navalpattu-Trichy, Jagirammapalayam-Salem, and Vadapalanji-Madurai), regional wage surveys, official college engineering seat allocations (TNEA / KEAM), and named employer ecosystems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Multi-Shot Calibration -->
+      <section class="section-container" id="multi-shot">
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-icon">🔬</div>
+            <div>
+              <h2 class="section-title">Multi-Shot Calibration & Quality Baseline</h2>
+              <div class="section-subtitle">&lt;multi_shot_calibration&gt; — Empirical Benchmark: Rejected Anecdotes vs.
+                Accepted Econometric Precision</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exemplar-comparison">
+          <!-- Negative Exemplar -->
+          <div class="exemplar-card exemplar-rejected">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span class="exemplar-badge badge-rejected">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                REJECTED EXEMPLAR
+              </span>
+              <span
+                style="font-size: 0.75rem; color: var(--rose); font-weight: 700; font-family: var(--font-mono);">type="REJECTED"</span>
+            </div>
+
+            <div class="exemplar-rationale">
+              <strong>Failure Rationale:</strong> Vague, anecdotal, zero quantitative data, lacks sourcing channels and
+              operational recruiter guidance.
+            </div>
+
+            <div class="exemplar-body">"Coimbatore does not have enough Solution Architects, so you should source them from Kochi and Trichy. Kochi has plenty of IT professionals at Infopark who want to work in Coimbatore because it is nearby and has nice weather. Trichy and Salem also have lots of cheap engineers from local colleges. The cost will be lower than Bangalore."</div>
+          </div>
+
+          <!-- Positive Exemplar -->
+          <div class="exemplar-card exemplar-accepted">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span class="exemplar-badge badge-accepted">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                ACCEPTED EXEMPLAR (GOLD STANDARD)
+              </span>
+              <span
+                style="font-size: 0.75rem; color: var(--emerald); font-weight: 700; font-family: var(--font-mono);">type="ACCEPTED"</span>
+            </div>
+
+            <div class="exemplar-rationale">
+              <strong>Acceptance Rationale:</strong> Precise, dual-verified, includes exact CTC ranges, feeder
+              companies, logistical infrastructure, and actionable recruiter tactics.
+            </div>
+
+            <div class="exemplar-body">Capability Deficit: BFSI Solution Architects (10+ yrs experience, CXO advisory).
+- Coimbatore Reality: Local pool is constrained (~80–120 total addressable architects in city limits, predominantly tied to Cognizant CBE, Bosch, and Cameron/SLB). Active availability is &lt;8% with high compensation lock-in (₹38–48 LPA).
+- Recommended Sourcing Hub: Kochi (Kakkenad Infopark Corridor) + Secondary Intra-State Feeder: Trichy / Madurai for enterprise delivery leads.
+- Talent Bandwidth: ~450–600 eligible enterprise architects across UST, IBS Software, Cognizant Kochi, and Allianz Technology; plus ~70–110 senior architects in Madurai/Trichy (HCLTech Madurai, Vuram/WNS).
+- Cost Arbitrage: Kochi medians sit at ₹32–42 LPA for 10–14 YOE (8–14% discount vs. Chennai, 22–28% vs. Bengaluru); Trichy/Madurai mid-senior profiles offer a 15–20% discount against Chennai baselines.
+- Relocation Behavior: High affinity for Western Tamil Nadu among candidates originating from Palakkad, Thrissur, and Ernakulam districts (2.5 to 4.5 hours via Vande Bharat / Intercity Express or NH 544), and near-zero cultural friction for candidates from Salem/Trichy (2 to 3.5 hours via NH 544 / NH 81). Offer-to-Join (OTJ) ratio benchmarks at 68% when hybrid flexibility (e.g., 3 days on-site, 2 days remote) is offered, vs. 34% for pure 5-day on-site.
+- Target Feeder Companies: IBS Software (Travel/BFSI), UST Global, Tata Elxsi (Connected Car/Infotainment), Mindcurv, HCLTech Madurai, Vuram/WNS Trichy.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Research Execution Workflow -->
+      <section class="section-container" id="execution-phases">
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-icon">🚀</div>
+            <div>
+              <h2 class="section-title">5-Phase Research Execution Workflow</h2>
+              <div class="section-subtitle">&lt;research_execution_workflow&gt; — End-to-end analytical tasks & feeder
+                market benchmarking</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phases-stepper">
+          <!-- Phase 1 -->
+          <div class="phase-card">
+            <div class="phase-header" onclick="togglePhase(this)">
+              <div class="phase-header-left">
+                <div class="phase-num">01</div>
+                <div class="phase-title-group">
+                  <h3>Requirement Decomposition & Skill Taxonomy Engineering</h3>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">PHASE-1 • 2 Core Decomposition
+                    Tasks</span>
+                </div>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div class="phase-content">
+              <div class="task-item">
+                <div class="task-id">T1.1</div>
+                <div class="task-text">
+                  <strong>Seniority Stratification:</strong> Parse the 376 requisitions and group them into normalized
+                  seniority tiers: Junior (1-3 yrs), Mid-Senior (4-7 yrs), Lead/Principal (8-11 yrs), and Enterprise
+                  Architect/Executive (12+ yrs).
+                </div>
+              </div>
+              <div class="task-item">
+                <div class="task-id">T1.2</div>
+                <div class="task-text">
+                  <strong>Prerequisite Friction Mapping:</strong> Map specific prerequisite combinations that heighten
+                  hiring friction (e.g., <code>.NET + Azure AI + Event-Driven Architecture</code> or
+                  <code>BFSI Solution Architect + CXO Presales</code>).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="phase-card">
+            <div class="phase-header" onclick="togglePhase(this)">
+              <div class="phase-header-left">
+                <div class="phase-num">02</div>
+                <div class="phase-title-group">
+                  <h3>Coimbatore Local Talent Landscape & Deficit Audit</h3>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">PHASE-2 • Local Strengths, Structural
+                    Deficits & Scarcity Index</span>
+                </div>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div class="phase-content">
+              <div class="task-item">
+                <div class="task-id">T2.1</div>
+                <div class="task-text">
+                  <strong>Audit CBE's Local Supply Strengths:</strong> Detail roles where CBE has deep, self-sustaining
+                  talent pools (e.g., Core Java/.NET, Manual & Selenium QA, Embedded systems, IT Service Desk,
+                  BPO/Operations) driven by local campuses and established employers (Cognizant, Bosch, Wipro, Cameron,
+                  Pricol, KGISL).
+                </div>
+              </div>
+              <div class="task-item">
+                <div class="task-id">T2.2</div>
+                <div class="task-text">
+                  <strong>Audit CBE's Structural Deficits:</strong> Identify where local supply breaks down (e.g.,
+                  Microsoft Fabric/Azure AI squads, ServiceNow specialized implementation engineers, presales Solution
+                  Architects with Tier-1 consulting background).
+                </div>
+              </div>
+              <div class="task-item">
+                <div class="task-id">T2.3</div>
+                <div class="task-text">
+                  <strong>Talent Scarcity Index:</strong> Quantify the Talent Scarcity Index (Scale 1-10) for each
+                  requirement cluster in Coimbatore, factoring in Time-to-Fill (TTF) and local market depth.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="phase-card">
+            <div class="phase-header" onclick="togglePhase(this)">
+              <div class="phase-header-left">
+                <div class="phase-num">03</div>
+                <div class="phase-title-group">
+                  <h3>Comparative Feeder Market Benchmarking (Kerala, Metros &amp; Tier-2 TN Feeder Hubs)</h3>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">PHASE-3 • 3 Feeder Tiers Evaluated Across 4
+                    Structural Dimensions</span>
+                </div>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div class="phase-content">
+              <div style="margin-bottom: 0.5rem;">
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                  For every identified skill deficit in Coimbatore, evaluate candidate feeder locations across three distinct tiers:
+                  <br>
+                  <strong style="color: var(--cyan-bright);">1. Kerala Feeder Corridors:</strong> Kochi (Infopark/SmartCity) &amp; Trivandrum (Technopark).
+                  <br>
+                  <strong style="color: var(--indigo);">2. Tier-1 Metros:</strong> Chennai (OMR/Guindy/Ambattur) &amp; Bengaluru (Whitefield/ECity/ORR).
+                  <br>
+                  <strong style="color: var(--emerald);">3. Emerging Tier-2 Tamil Nadu Feeder Hubs:</strong> Top 2–3 high-gravity intra-state feeder markets—specifically <strong>Trichy</strong> (Navalpattu ELCOT / NIT corridor), <strong>Salem</strong> (Jagirammapalayam ELCOT / Sona / NH 544 West TN corridor), and <strong>Madurai</strong> (Vadapalanji ELCOT / HCLTech &amp; Honeywell corridor)—or dynamically determine the optimal secondary TN feeder city based on skill depth, campus concentration, and lower cost-arbitrage / high relocation willingness to CBE.
+                </p>
+              </div>
+
+              <!-- 4 Dimensions Grid -->
+              <div class="dimensions-grid">
+                <div class="dimension-card">
+                  <div class="dimension-head">
+                    <span>💰 DIM-1: Cost & Compensation</span>
+                  </div>
+                  <ul class="dimension-metrics">
+                    <li>Median Base CTC by YOE (3-5, 6-9, 10-14 yrs) across Metros vs. Kochi vs. Tier-2 TN (Trichy, Salem, Madurai)</li>
+                    <li>Average Expected Hike % for lateral move to Coimbatore</li>
+                    <li>Total Cost to Hire (relocation allowance + buyouts)</li>
+                    <li>Cost variance % relative to Coimbatore benchmarks</li>
+                  </ul>
+                </div>
+
+                <div class="dimension-card">
+                  <div class="dimension-head">
+                    <span>⚡ DIM-2: Skill Depth & Complexity</span>
+                  </div>
+                  <ul class="dimension-metrics">
+                    <li>Tier-1 vs. Tier-2/3 consulting presence across markets</li>
+                    <li>Global enterprise prod vs. maintenance/legacy support</li>
+                    <li>Code-level engineering maturity (Microservices, Cloud, AI/ML)</li>
+                  </ul>
+                </div>
+
+                <div class="dimension-card">
+                  <div class="dimension-head">
+                    <span>🌊 DIM-3: Bandwidth & Pool Depth</span>
+                  </div>
+                  <ul class="dimension-metrics">
+                    <li>Estimated addressable headcount in target cities (Kochi, TVM, MAA, BLR, Trichy, Salem, MDU)</li>
+                    <li>Active job-seeker liquidity vs. passive talent</li>
+                    <li>Competing employer density (counter-offer risk)</li>
+                  </ul>
+                </div>
+
+                <div class="dimension-card">
+                  <div class="dimension-head">
+                    <span>🚆 DIM-4: Behavioral & Relocation</span>
+                  </div>
+                  <ul class="dimension-metrics">
+                    <li>Relocation Propensity Score to CBE (L/M/H) by market</li>
+                    <li>Commute/Road travel time (NH 544, NH 81, NH 83 & Rail)</li>
+                    <li>Notice Period Compliance & Ghosting index</li>
+                    <li>Realistic OTJ % (On-site vs. Hybrid models)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="phase-card">
+            <div class="phase-header" onclick="togglePhase(this)">
+              <div class="phase-header-left">
+                <div class="phase-num">04</div>
+                <div class="phase-title-group">
+                  <h3>Institutional & Lateral Feeder Channel Mapping</h3>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">PHASE-4 • Employer Ecosystems & Academic
+                    Pipelines</span>
+                </div>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div class="phase-content">
+              <div class="task-item">
+                <div class="task-id">T4.1</div>
+                <div class="task-text">
+                  <strong>Target Companies (Poaching & Lateral Sourcing List):</strong>
+                  Identify specific IT service firms, product engineering centers, and GCCs in Kochi, Trivandrum, Chennai, and emerging Tier-2 TN centers (e.g., Trichy: Vuram/WNS, Scientific Publishing; Madurai: HCLTech, Honeywell, Chella Software; Salem: Vee Technologies, Sona ecosystem) where candidates with identical stacks are clustered. Specify which companies operate with 60-90 day notice periods and where buyout openness exists.
+                </div>
+              </div>
+              <div class="task-item">
+                <div class="task-id">T4.2</div>
+                <div class="task-text">
+                  <strong>Target Academic Institutions (Early Career & 1-3 YOE Juniors):</strong>
+                  Map premier and Tier-2 engineering colleges across Coimbatore/Western TN (PSG Tech, CIT, Kumaraguru, Amrita, Sri Krishna), Central/Southern TN (NIT Trichy, Saranathan, SASTRA, TCE Madurai, Sona College Salem, GCE Salem), and the Kerala Feeder Corridor (Model Engineering College Thrikkakara, SCMS, Rajagiri, GEC Thrissur, NSS Palakkad, TKM Kollam). Provide estimated circuit/CS intake capacities, curriculum alignment with modern cloud/AI, and historical campus placement conversion data.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 5 -->
+          <div class="phase-card">
+            <div class="phase-header" onclick="togglePhase(this)">
+              <div class="phase-header-left">
+                <div class="phase-num">05</div>
+                <div class="phase-title-group">
+                  <h3>Recruitment Analyst Operational Playbook</h3>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);">PHASE-5 • Actionable Recruiter Playbook,
+                    Search Strings & Scripts</span>
+                </div>
+              </div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+            <div class="phase-content">
+              <div class="task-item">
+                <div class="task-id">T5.1</div>
+                <div class="task-text">
+                  <strong>Sourcing Decision Tree:</strong> Construct a decision framework guiding recruiters: When to hire locally in CBE, when to tap intra-state Tier-2 TN feeders (Trichy, Salem, Madurai) for cost arbitrage and high retention, when to tap the Kerala corridor (Kochi/Trivandrum), and when to escalate to Tier-1 Metros (Bengaluru/Chennai/Remote).
+                </div>
+              </div>
+              <div class="task-item">
+                <div class="task-id">T5.2</div>
+                <div class="task-text">
+                  <strong>Boolean & Semantic Search Strings:</strong> Provide actionable search strings for LinkedIn Recruiter / Naukri / Foundit for the top 3 hardest-to-fill profiles, incorporating regional geographical radius filters for TN &amp; Kerala feeder corridors.
+                </div>
+              </div>
+              <div class="task-item">
+                <div class="task-id">T5.3</div>
+                <div class="task-text">
+                  <strong>Relocation Pitch Scripts & Value Proposition:</strong> Formulate concrete pitch scripts and value propositions tailored for both Kerala candidates and Tier-2 TN candidates (Trichy/Salem/Madurai) relocating to Coimbatore (focusing on cost-of-living parity, proximity, quality of life, schooling, highway/rail connectivity, and traffic differentials).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Output Deliverables & Citation Protocol -->
+      <section class="section-container" id="output-specs">
+        <div class="section-header">
+          <div class="section-header-left">
+            <div class="section-icon">📋</div>
+            <div>
+              <h2 class="section-title">Output Deliverables & Citation Protocol</h2>
+              <div class="section-subtitle">&lt;output_specifications&gt; — Required 6-Section Report Format and
+                Citation Strictness</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sections-grid">
+          <div class="section-spec-card">
+            <span class="section-spec-num">Section 1</span>
+            <h4>Executive Summary & Demand Overview</h4>
+            <p>Synthesize the 376 requisitions into an executive-level skill distribution chart and highlight primary
+              recruiting bottleneck zones.</p>
+          </div>
+
+          <div class="section-spec-card">
+            <span class="section-spec-num">Section 2</span>
+            <h4>Coimbatore Local Supply vs. Deficit Matrix</h4>
+            <p>Comprehensive comparison table: [Demand Cluster | Requisition Count | CBE Local Depth (High/Med/Low) |
+              Scarcity Index (1-10) | Root Cause of Deficit].</p>
+          </div>
+
+          <div class="section-spec-card">
+            <span class="section-spec-num">Section 3</span>
+            <h4>Feeder Hub Comparative Analysis (Kochi, Metros &amp; Tier-2 TN Feeders)</h4>
+            <p>Detailed evaluation table breaking down Coimbatore vs. Kochi vs. Trivandrum vs. Chennai vs. Bengaluru vs. Top Tier-2 TN Feeder Cities (Trichy, Salem, Madurai, or skill-dynamically selected TN cities) across Cost, Skill Depth, Bandwidth, and Behavior.</p>
+          </div>
+
+          <div class="section-spec-card">
+            <span class="section-spec-num">Section 4</span>
+            <h4>Lateral Sourcing Target Directory</h4>
+            <p>Structured company target lists segmented by technology cluster (e.g., ServiceNow squads, Data/Fabric squads, BFSI Architecture) across Kerala, Chennai/Bengaluru, and Tier-2 TN hubs.</p>
+          </div>
+
+          <div class="section-spec-card">
+            <span class="section-spec-num">Section 5</span>
+            <h4>Academic Pipeline & Junior Talent Engine</h4>
+            <p>College feeder matrix across Western TN, Central/Southern TN (NIT Trichy, TCE Madurai, Sona Salem, SASTRA), and Kerala with NIRF brackets, annual CS/IT graduating batch sizes, and specialization focus.</p>
+          </div>
+
+          <div class="section-spec-card">
+            <span class="section-spec-num">Section 6</span>
+            <h4>Actionable Sourcing Playbook for Talent Acquisition</h4>
+            <p>Recruiter-ready operational guide including multi-tier decision rules (CBE vs. Tier-2 TN vs. Kerala vs. Metros), wage negotiation guardrails, and candidate pitch strategies.</p>
+          </div>
+        </div>
+
+        <!-- Citation Callout Banner -->
+        <div class="citation-callout">
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">
+              &lt;citation_protocol&gt; — Mandatory Inline Evidence Format
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted);">
+              Every quantitative estimate and institutional fact must be cited inline using the rigorous evidentiary
+              format:
+            </p>
+          </div>
+          <div class="citation-code">
+            [Source: Real Estate / Tech Park Census / Wage Survey / Educational Authority | Year | Key Metric Quote]
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RAW XML CODE VIEW -->
+    <div id="xml-view" class="raw-xml-container">
+      <div class="xml-toolbar">
+        <div class="xml-file-info">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>req.xml • 213 lines • 15.3 KB</span>
+        </div>
+        <button class="action-btn" onclick="copyFullXml()" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          Copy Code
+        </button>
+      </div>
+      <pre class="xml-pre" id="raw-xml-code"></pre>
+    </div>
+
+  </main>
+
+  <!-- Copy Toast Notification -->
+  <div class="toast" id="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Copied req.xml to clipboard!</span>
+  </div>
+
+  <script>
+    const XML_SOURCE = `<research_mission>
+  <system_directive>
+    <role>
+      You are an elite Principal Workforce Intelligence Strategist and Labor Market Econometrician specializing in South Indian technology corridors (Western, Central, and Southern Tamil Nadu, and Kerala). Your expertise spans human capital analytics, compensation benchmarking, GCC talent dynamics, engineering curriculum mapping, and talent sourcing strategy.
+    </role>
+    <objective>
+      Perform an exhaustive, empirical, end-to-end talent supply-deficit audit and regional sourcing feasibility analysis based on an active dataset of 376 hiring requisitions in Coimbatore (CBE). Identify the exact technical competencies CBE can fulfill locally versus structural talent deficits, and deliver a mathematically grounded sourcing matrix benchmarking alternative feeder markets—specifically Kochi, Trivandrum, Chennai, Bengaluru, and high-gravity Tier-2 Tamil Nadu feeder hubs (specifically Trichy, Salem, and Madurai, or dynamically selected top 2–3 intra-state cities based on skill-cluster affinity)—across Cost, Skill Depth, Bandwidth, and Relocation Behavior.
+    </objective>
+    <epistemic_standard>
+      Operate with the rigorous evidentiary standards of a joint McKinsey workforce audit and a Government Labor Bureau economic survey. Never rely on speculative statements, marketing hype, or ungrounded city boosterism. Every empirical assertion must be backed by traceable secondary sources, real-world hiring patterns, and verifiable labor mobility data.
+    </epistemic_standard>
+  </system_directive>
+
+  <dataset_telemetry>
+    <source_summary>
+      The primary demand dataset comprises 376 non-null hiring requisitions (out of 439 raw rows) for Coimbatore (CBE), distributed across 14 Delivery Units and 137 unique designations.
+    </source_summary>
+    <primary_demand_clusters>
+      <cluster id="CL-1" name="Enterprise Full-Stack &amp; Cloud Modernization">
+        <volume>High (~30% of total volume)</volume>
+        <stacks>.NET, C#, .NET Core, Web API, Event-Driven Architecture, Entity Framework, OAuth, Microservices, Java/Spring Boot.</stacks>
+      </cluster>
+      <cluster id="CL-2" name="Data Engineering, Analytics &amp; Applied AI">
+        <volume>Medium-High (~20% of total volume)</volume>
+        <stacks>Microsoft Fabric, Azure Data Services, Data Modeling, Data Warehousing, SQL, Power BI, Azure AI, LLM Integration, Claude Code, Python.</stacks>
+      </cluster>
+      <cluster id="CL-3" name="Quality Engineering &amp; Test Automation">
+        <volume>High (~22% of total volume)</volume>
+        <stacks>Selenium, Appium, Java Test Automation, Mobile Testing, Performance Testing, Manual Functional QA, Test Leads.</stacks>
+      </cluster>
+      <cluster id="CL-4" name="Enterprise SaaS &amp; Workflow Platforms">
+        <volume>Moderate (~12% of total volume)</volume>
+        <stacks>ServiceNow Developers, ServiceNow Business Analysts, ERP/B2W Support Systems, Enterprise Graph/Workflow Automation.</stacks>
+      </cluster>
+      <cluster id="CL-5" name="Consulting &amp; Enterprise Architecture">
+        <volume>Specialized/High-Stakes (~16% of total volume)</volume>
+        <stacks>10+ years Solution Architecture, BFSI domain mandatory, Presales/Proposal design, CXO-facing consultative delivery, Tier-1/Tier-2 consulting pedigree.</stacks>
+      </cluster>
+    </primary_demand_clusters>
+    <key_delivery_units>
+      Apex-2 (107), Beacon (76), Delta (53), Catalyst (49), Evolve-1 (47), Apex-1 (29), Evolve-2 (6), Presales (2).
+    </key_delivery_units>
+  </dataset_telemetry>
+
+  <operational_boundaries_and_anti_bias>
+    <mandatory_rule id="MR-01">
+      <name>Strict Dual-Verification Protocol (DVP)</name>
+      <description>
+        No numerical claim regarding candidate pool size, average CTC, notice period duration, or college intake can be asserted based on a single speculative data point. Every estimate must be cross-verified or explicitly framed with an evidentiary confidence interval (e.g., "Confidence: High [verified across Naukri hiring index + AmbitionBox salary telemetry]").
+      </description>
+    </mandatory_rule>
+
+    <mandatory_rule id="MR-02">
+      <name>Zero-Tolerance for City Boosterism</name>
+      <description>
+        Reject generic superlatives such as "Kochi is rapidly emerging", "Trichy has cheap abundant engineers", "Coimbatore has a world-class talent pool", or "Bengaluru has unlimited supply". Quantify every market condition: provide explicit headcount estimates, active-to-passive ratios, compensation brackets (INR LPA), and attrition/retention rates.
+      </description>
+    </mandatory_rule>
+
+    <mandatory_rule id="MR-03">
+      <name>Grounded Relocation Behavioral Modeling</name>
+      <description>
+        Do not assume candidates will relocate simply because a job exists. Relocation feasibility must be modeled through geo-economic realities: commute corridors (e.g., Kerala-CBE connectivity via NH 544 &amp; Southern Railway Palakkad division; Central/West TN corridors such as Salem-CBE via NH 544, Trichy-CBE via NH 81 / Karur rail link, and Madurai-CBE via NH 83), cost-of-living index differentials, cultural/linguistic overlap, family stability factors, and historical offer-to-join (OTJ) ratios.
+      </description>
+    </mandatory_rule>
+
+    <mandatory_rule id="MR-04">
+      <name>Proof-by-Quote and Real-World Sourcing Evidence</name>
+      <description>
+        For market assertions, cite specific industry entities, technological parks (e.g., Infopark Phase 1/2, Technopark, TIDEL Park CBE, Siruseri SIPCOT, ELCOT IT Parks in Navalpattu-Trichy, Jagirammapalayam-Salem, and Vadapalanji-Madurai), regional wage surveys, official college engineering seat allocations (TNEA / KEAM), and named employer ecosystems.
+      </description>
+    </mandatory_rule>
+  </operational_boundaries_and_anti_bias>
+
+  <multi_shot_calibration>
+    <negative_exemplar type="REJECTED">
+      <rationale>Vague, anecdotal, zero quantitative data, lacks sourcing channels and operational recruiter guidance.</rationale>
+      <sample_text>
+        "Coimbatore does not have enough Solution Architects, so you should source them from Kochi and Trichy. Kochi has plenty of IT professionals at Infopark who want to work in Coimbatore because it is nearby and has nice weather. Trichy and Salem also have lots of cheap engineers from local colleges. The cost will be lower than Bangalore."
+      </sample_text>
+    </negative_exemplar>
+
+    <positive_exemplar type="ACCEPTED">
+      <rationale>Precise, dual-verified, includes exact CTC ranges, feeder companies, logistical infrastructure, and actionable recruiter tactics.</rationale>
+      <sample_text>
+        "Capability Deficit: BFSI Solution Architects (10+ yrs experience, CXO advisory).
+        - Coimbatore Reality: Local pool is constrained (~80–120 total addressable architects in city limits, predominantly tied to Cognizant CBE, Bosch, and Cameron/SLB). Active availability is &lt;8% with high compensation lock-in (₹38–48 LPA).
+        - Recommended Sourcing Hub: Kochi (Kakkenad Infopark Corridor) + Secondary Intra-State Feeder: Trichy / Madurai for enterprise delivery leads.
+        - Talent Bandwidth: ~450–600 eligible enterprise architects across UST, IBS Software, Cognizant Kochi, and Allianz Technology; plus ~70–110 senior architects in Madurai/Trichy (HCLTech Madurai, Vuram/WNS).
+        - Cost Arbitrage: Kochi medians sit at ₹32–42 LPA for 10–14 YOE (8–14% discount vs. Chennai, 22–28% vs. Bengaluru); Trichy/Madurai mid-senior profiles offer a 15–20% discount against Chennai baselines.
+        - Relocation Behavior: High affinity for Western Tamil Nadu among candidates originating from Palakkad, Thrissur, and Ernakulam districts (2.5 to 4.5 hours via Vande Bharat / Intercity Express or NH 544), and near-zero cultural friction for candidates from Salem/Trichy (2 to 3.5 hours via NH 544 / NH 81). Offer-to-Join (OTJ) ratio benchmarks at 68% when hybrid flexibility (e.g., 3 days on-site, 2 days remote) is offered, vs. 34% for pure 5-day on-site.
+        - Target Feeder Companies: IBS Software (Travel/BFSI), UST Global, Tata Elxsi (Connected Car/Infotainment), Mindcurv, HCLTech Madurai, Vuram/WNS Trichy."
+      </sample_text>
+    </positive_exemplar>
+  </multi_shot_calibration>
+
+  <research_execution_workflow>
+    <phase id="PHASE-1">
+      <name>Requirement Decomposition &amp; Skill Taxonomy Engineering</name>
+      <tasks>
+        <task id="T1.1">Parse the 376 requisitions and group them into normalized seniority tiers: Junior (1-3 yrs), Mid-Senior (4-7 yrs), Lead/Principal (8-11 yrs), and Enterprise Architect/Executive (12+ yrs).</task>
+        <task id="T1.2">Map specific prerequisite combinations that heighten hiring friction (e.g., '.NET + Azure AI + Event-Driven Architecture' or 'BFSI Solution Architect + CXO Presales').</task>
+      </tasks>
+    </phase>
+
+    <phase id="PHASE-2">
+      <name>Coimbatore Local Talent Landscape &amp; Deficit Audit</name>
+      <tasks>
+        <task id="T2.1">Audit CBE's Local Supply Strengths: Detail roles where CBE has deep, self-sustaining talent pools (e.g., Core Java/.NET, Manual &amp; Selenium QA, Embedded systems, IT Service Desk, BPO/Operations) driven by local campuses and established employers (Cognizant, Bosch, Wipro, Cameron, Pricol, KGISL).</task>
+        <task id="T2.2">Audit CBE's Structural Deficits: Identify where local supply breaks down (e.g., Microsoft Fabric/Azure AI squads, ServiceNow specialized implementation engineers, presales Solution Architects with Tier-1 consulting background).</task>
+        <task id="T2.3">Quantify the Talent Scarcity Index (Scale 1-10) for each requirement cluster in Coimbatore, factoring in Time-to-Fill (TTF) and local market depth.</task>
+      </tasks>
+    </phase>
+
+    <phase id="PHASE-3">
+      <name>Comparative Feeder Market Benchmarking (Kerala, Metros &amp; Tier-2 TN Feeder Hubs)</name>
+      <instructions>
+        For every identified skill deficit in Coimbatore, evaluate candidate feeder locations across three tiers:
+        1. Kerala Feeder Corridors: Kochi (Infopark / SmartCity) and Trivandrum (Technopark).
+        2. Tier-1 Metros: Chennai (OMR / Guindy / Ambattur) and Bengaluru (Whitefield / Electronic City / ORR).
+        3. Emerging Tier-2 Tamil Nadu Feeder Hubs: Evaluate the top 2–3 high-gravity intra-state feeder markets—specifically Trichy (Navalpattu ELCOT / NIT &amp; Tier-2 services corridor), Salem (Jagirammapalayam ELCOT / Sona / NH 544 West TN corridor), and Madurai (Vadapalanji ELCOT / HCLTech &amp; Honeywell corridor)—or dynamically determine the optimal secondary TN feeder city based on skill depth, campus concentration, and lower cost-arbitrage / high relocation willingness to CBE.
+      </instructions>
+      <dimension_matrix>
+        <dimension id="DIM-1" name="Cost &amp; Compensation Arbitrage">
+          <metrics>
+            - Median Base CTC by YOE (3-5 yrs, 6-9 yrs, 10-14 yrs) across Metros vs. Kochi vs. Tier-2 TN (Trichy, Salem, Madurai).
+            - Average Expected Hike % to induce lateral moves to Coimbatore.
+            - Total Cost to Hire (relocation allowance + notice buyouts).
+            - Cost variance percentage relative to Coimbatore benchmarks.
+          </metrics>
+        </dimension>
+        <dimension id="DIM-2" name="Skill Depth &amp; Project Complexity">
+          <metrics>
+            - Tier-1 vs. Tier-2/3 consulting presence across feeder markets.
+            - Exposure to enterprise-grade production environments (e.g., Global BFSI, Healthcare, Modern SaaS) vs. maintenance/legacy support.
+            - Code-level engineering maturity (System design, microservices, cloud-native frameworks, AI/ML adoption).
+          </metrics>
+        </dimension>
+        <dimension id="DIM-3" name="Bandwidth &amp; Talent Pool Depth">
+          <metrics>
+            - Estimated addressable headcount in target city for specific skills (Kochi, Trivandrum, Chennai, Bengaluru, Trichy, Salem, Madurai).
+            - Active job-seeker liquidity vs. passive/entrenched talent.
+            - Competing employer density (risk of counter-offers and bidding wars).
+          </metrics>
+        </dimension>
+        <dimension id="DIM-4" name="Behavioral &amp; Relocation Dynamics">
+          <metrics>
+            - Relocation Propensity Score to Coimbatore (Low/Medium/High) by origin market.
+            - Commute &amp; Geographic Factors (highway travel times via NH 544 / NH 81 / NH 83, train corridors via Southern Railway, family relocation vs. bachelor weekly commute).
+            - Notice Period Compliance &amp; Attrition risk prior to Day 1 (Ghosting index).
+            - Realistic Offer-to-Join (OTJ) percentage for on-site vs. hybrid models.
+          </metrics>
+        </dimension>
+      </dimension_matrix>
+    </phase>
+
+    <phase id="PHASE-4">
+      <name>Institutional &amp; Lateral Feeder Channel Mapping</name>
+      <tasks>
+        <task id="T4.1">
+          Target Companies (Poaching/Sourcing List):
+          - Identify specific IT service firms, product engineering centers, and GCCs in Kochi, Trivandrum, Chennai, and emerging Tier-2 TN centers (e.g., Trichy: Vuram/WNS, Scientific Publishing; Madurai: HCLTech, Honeywell, Chella Software; Salem: Vee Technologies, Sona ecosystem) where candidates with identical stacks are clustered.
+          - Specify which companies operate with 60-90 day notice periods and where buyout openness exists.
+        </task>
+        <task id="T4.2">
+          Target Academic Institutions (Early Career &amp; Junior Lateral 1-3 YOE):
+          - Map premier and Tier-2 engineering colleges across Coimbatore/Western TN (e.g., PSG Tech, CIT, Kumaraguru, Amrita, Sri Krishna), Central/Southern TN (e.g., NIT Trichy, Saranathan, SASTRA, TCE Madurai, Sona College Salem, GCE Salem), and the Kerala Feeder Corridor (e.g., Model Engineering College Thrikkakara, SCMS, Rajagiri, GEC Thrissur, NSS Palakkad, TKM Kollam).
+          - Provide estimated circuit branch / CS intake capacities, curriculum alignment with modern cloud/AI stacks, and historical campus placement conversion data.
+        </task>
+      </tasks>
+    </phase>
+
+    <phase id="PHASE-5">
+      <name>Recruitment Analyst Operational Playbook</name>
+      <tasks>
+        <task id="T5.1">Construct a 'Sourcing Decision Tree' guiding recruiters: When to hire locally in CBE, when to tap intra-state Tier-2 TN feeders (Trichy, Salem, Madurai) for cost arbitrage and high retention, when to tap the Kerala corridor (Kochi/Trivandrum), and when to escalate to Tier-1 Metros (Bengaluru/Chennai/Remote).</task>
+        <task id="T5.2">Provide actionable Boolean &amp; Semantic Search strings for LinkedIn Recruiter / Naukri / Foundit for the top 3 hardest-to-fill profiles, incorporating regional geographical radius filters for TN &amp; Kerala feeder corridors.</task>
+        <task id="T5.3">Formulate concrete pitch scripts and value propositions tailored for both Kerala candidates and Tier-2 TN candidates (Trichy/Salem/Madurai) relocating to Coimbatore (focusing on cost-of-living parity, proximity, quality of life, schooling, highway/rail connectivity, and traffic differentials).</task>
+      </tasks>
+    </phase>
+  </research_execution_workflow>
+
+  <output_specifications>
+    <format_requirements>
+      Deliver the report in a highly organized, executive-grade document utilizing professional markdown tables, metric callouts, and clean section hierarchies.
+    </format_requirements>
+    <required_sections>
+      <section title="1. Executive Summary &amp; Demand Overview">
+        Synthesize the 376 requisitions into an executive-level skill distribution chart and highlight primary recruiting bottleneck zones.
+      </section>
+      <section title="2. Coimbatore Local Supply vs. Deficit Matrix">
+        Comprehensive comparison table: [Demand Cluster | Requisition Count | CBE Local Depth (High/Med/Low) | Scarcity Index (1-10) | Root Cause of Deficit].
+      </section>
+      <section title="3. Feeder Hub Comparative Analysis (Kochi, Metros &amp; Tier-2 TN Feeders)">
+        Detailed evaluation table breaking down Coimbatore vs. Kochi vs. Trivandrum vs. Chennai vs. Bengaluru vs. Top Tier-2 TN Feeder Cities (Trichy, Salem, Madurai, or skill-dynamically selected TN cities) across Cost, Skill Depth, Bandwidth, and Behavior.
+      </section>
+      <section title="4. Lateral Sourcing Target Directory">
+        Structured company target lists segmented by technology cluster (e.g., ServiceNow squads, Data/Fabric squads, BFSI Architecture) across Kerala, Chennai/Bengaluru, and Tier-2 TN hubs.
+      </section>
+      <section title="5. Academic Pipeline &amp; Junior Talent Engine">
+        College feeder matrix across Western TN, Central/Southern TN (NIT Trichy, TCE Madurai, Sona Salem, SASTRA), and Kerala with NIRF brackets, annual CS/IT graduating batch sizes, and specialization focus.
+      </section>
+      <section title="6. Actionable Sourcing Playbook for Talent Acquisition">
+        Recruiter-ready operational guide including multi-tier decision rules (CBE vs. Tier-2 TN vs. Kerala vs. Metros), wage negotiation guardrails, and candidate pitch strategies.
+      </section>
+    </required_sections>
+    <citation_protocol>
+      Every quantitative estimate and institutional fact must be cited inline using the format:
+      \`[Source: Real Estate / Tech Park Census / Wage Survey / Educational Authority | Year | Key Metric Quote]\`
+    </citation_protocol>
+  </output_specifications>
+</research_mission>`;
+
+    // Syntax highlight XML for the raw view
+    function renderRawXml() {
+      const escaped = XML_SOURCE
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+
+      const highlighted = escaped
+        // Tags
+        .replace(/(&lt;\/?)([\w-]+)(.*?)(&gt;)/g, function (match, p1, p2, p3, p4) {
+          let attrHighlighted = p3.replace(/([\w-]+)=(&quot;.*?&quot;)/g, '<span class="xml-attr-name">$1</span>=<span class="xml-attr-val">$2</span>');
+          return `<span class="xml-tag">${p1}${p2}</span>${attrHighlighted}<span class="xml-tag">${p4}</span>`;
+        });
+
+      document.getElementById('raw-xml-code').innerHTML = highlighted;
+    }
+
+    // Toggle between Visual dashboard and Raw XML
+    function switchView(view) {
+      const visualView = document.getElementById('visual-view');
+      const xmlView = document.getElementById('xml-view');
+      const btnVisual = document.getElementById('btn-view-visual');
+      const btnXml = document.getElementById('btn-view-xml');
+      const quickAnchors = document.getElementById('quick-anchors');
+
+      if (view === 'visual') {
+        visualView.style.display = 'block';
+        xmlView.style.display = 'none';
+        btnVisual.classList.add('active');
+        btnXml.classList.remove('active');
+        quickAnchors.style.display = 'flex';
+      } else {
+        visualView.style.display = 'none';
+        xmlView.style.display = 'block';
+        btnVisual.classList.remove('active');
+        btnXml.classList.add('active');
+        quickAnchors.style.display = 'none';
+      }
+    }
+
+    // Theme toggle
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', newTheme);
+    }
+
+    // Expand/Collapse accordion phase cards
+    function togglePhase(header) {
+      const card = header.parentElement;
+      const content = card.querySelector('.phase-content');
+      const arrow = header.querySelector('svg');
+
+      if (content.style.display === 'none') {
+        content.style.display = 'flex';
+        arrow.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.display = 'none';
+        arrow.style.transform = 'rotate(-90deg)';
+      }
+    }
+
+    // Copy XML to clipboard
+    function copyFullXml() {
+      navigator.clipboard.writeText(XML_SOURCE).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2400);
+      }).catch(err => {
+        console.error('Failed to copy', err);
+      });
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderRawXml();
+    });
+  </script>
+</body>
+
+</html>

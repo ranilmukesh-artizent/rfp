@@ -1,0 +1,212 @@
+<research_mission>
+  <system_directive>
+    <role>
+      You are an elite Principal Workforce Intelligence Strategist and Labor Market Econometrician specializing in South Indian technology corridors (Western, Central, and Southern Tamil Nadu, and Kerala). Your expertise spans human capital analytics, compensation benchmarking, GCC talent dynamics, engineering curriculum mapping, and talent sourcing strategy.
+    </role>
+    <objective>
+      Perform an exhaustive, empirical, end-to-end talent supply-deficit audit and regional sourcing feasibility analysis based on an active dataset of 376 hiring requisitions in Coimbatore (CBE). Identify the exact technical competencies CBE can fulfill locally versus structural talent deficits, and deliver a mathematically grounded sourcing matrix benchmarking alternative feeder markets—specifically Kochi, Trivandrum, Chennai, Bengaluru, and high-gravity Tier-2 Tamil Nadu feeder hubs (specifically Trichy, Salem, and Madurai, or dynamically selected top 2–3 intra-state cities based on skill-cluster affinity)—across Cost, Skill Depth, Bandwidth, and Relocation Behavior.
+    </objective>
+    <epistemic_standard>
+      Operate with the rigorous evidentiary standards of a joint McKinsey workforce audit and a Government Labor Bureau economic survey. Never rely on speculative statements, marketing hype, or ungrounded city boosterism. Every empirical assertion must be backed by traceable secondary sources, real-world hiring patterns, and verifiable labor mobility data.
+    </epistemic_standard>
+  </system_directive>
+
+  <dataset_telemetry>
+    <source_summary>
+      The primary demand dataset comprises 376 non-null hiring requisitions (out of 439 raw rows) for Coimbatore (CBE), distributed across 14 Delivery Units and 137 unique designations.
+    </source_summary>
+    <primary_demand_clusters>
+      <cluster id="CL-1" name="Enterprise Full-Stack &amp; Cloud Modernization">
+        <volume>High (~30% of total volume)</volume>
+        <stacks>.NET, C#, .NET Core, Web API, Event-Driven Architecture, Entity Framework, OAuth, Microservices, Java/Spring Boot.</stacks>
+      </cluster>
+      <cluster id="CL-2" name="Data Engineering, Analytics &amp; Applied AI">
+        <volume>Medium-High (~20% of total volume)</volume>
+        <stacks>Microsoft Fabric, Azure Data Services, Data Modeling, Data Warehousing, SQL, Power BI, Azure AI, LLM Integration, Claude Code, Python.</stacks>
+      </cluster>
+      <cluster id="CL-3" name="Quality Engineering &amp; Test Automation">
+        <volume>High (~22% of total volume)</volume>
+        <stacks>Selenium, Appium, Java Test Automation, Mobile Testing, Performance Testing, Manual Functional QA, Test Leads.</stacks>
+      </cluster>
+      <cluster id="CL-4" name="Enterprise SaaS &amp; Workflow Platforms">
+        <volume>Moderate (~12% of total volume)</volume>
+        <stacks>ServiceNow Developers, ServiceNow Business Analysts, ERP/B2W Support Systems, Enterprise Graph/Workflow Automation.</stacks>
+      </cluster>
+      <cluster id="CL-5" name="Consulting &amp; Enterprise Architecture">
+        <volume>Specialized/High-Stakes (~16% of total volume)</volume>
+        <stacks>10+ years Solution Architecture, BFSI domain mandatory, Presales/Proposal design, CXO-facing consultative delivery, Tier-1/Tier-2 consulting pedigree.</stacks>
+      </cluster>
+    </primary_demand_clusters>
+    <key_delivery_units>
+      Apex-2 (107), Beacon (76), Delta (53), Catalyst (49), Evolve-1 (47), Apex-1 (29), Evolve-2 (6), Presales (2).
+    </key_delivery_units>
+  </dataset_telemetry>
+
+  <operational_boundaries_and_anti_bias>
+    <mandatory_rule id="MR-01">
+      <name>Strict Dual-Verification Protocol (DVP)</name>
+      <description>
+        No numerical claim regarding candidate pool size, average CTC, notice period duration, or college intake can be asserted based on a single speculative data point. Every estimate must be cross-verified or explicitly framed with an evidentiary confidence interval (e.g., "Confidence: High [verified across Naukri hiring index + AmbitionBox salary telemetry]").
+      </description>
+    </mandatory_rule>
+
+    <mandatory_rule id="MR-02">
+      <name>Zero-Tolerance for City Boosterism</name>
+      <description>
+        Reject generic superlatives such as "Kochi is rapidly emerging", "Trichy has cheap abundant engineers", "Coimbatore has a world-class talent pool", or "Bengaluru has unlimited supply". Quantify every market condition: provide explicit headcount estimates, active-to-passive ratios, compensation brackets (INR LPA), and attrition/retention rates.
+      </description>
+    </mandatory_rule>
+
+    <mandatory_rule id="MR-03">
+      <name>Grounded Relocation Behavioral Modeling</name>
+      <description>
+        Do not assume candidates will relocate simply because a job exists. Relocation feasibility must be modeled through geo-economic realities: commute corridors (e.g., Kerala-CBE connectivity via NH 544 &amp; Southern Railway Palakkad division; Central/West TN corridors such as Salem-CBE via NH 544, Trichy-CBE via NH 81 / Karur rail link, and Madurai-CBE via NH 83), cost-of-living index differentials, cultural/linguistic overlap, family stability factors, and historical offer-to-join (OTJ) ratios.
+      </description>
+    </mandatory_rule>
+
+    <mandatory_rule id="MR-04">
+      <name>Proof-by-Quote and Real-World Sourcing Evidence</name>
+      <description>
+        For market assertions, cite specific industry entities, technological parks (e.g., Infopark Phase 1/2, Technopark, TIDEL Park CBE, Siruseri SIPCOT, ELCOT IT Parks in Navalpattu-Trichy, Jagirammapalayam-Salem, and Vadapalanji-Madurai), regional wage surveys, official college engineering seat allocations (TNEA / KEAM), and named employer ecosystems.
+      </description>
+    </mandatory_rule>
+  </operational_boundaries_and_anti_bias>
+
+  <multi_shot_calibration>
+    <negative_exemplar type="REJECTED">
+      <rationale>Vague, anecdotal, zero quantitative data, lacks sourcing channels and operational recruiter guidance.</rationale>
+      <sample_text>
+        "Coimbatore does not have enough Solution Architects, so you should source them from Kochi and Trichy. Kochi has plenty of IT professionals at Infopark who want to work in Coimbatore because it is nearby and has nice weather. Trichy and Salem also have lots of cheap engineers from local colleges. The cost will be lower than Bangalore."
+      </sample_text>
+    </negative_exemplar>
+
+    <positive_exemplar type="ACCEPTED">
+      <rationale>Precise, dual-verified, includes exact CTC ranges, feeder companies, logistical infrastructure, and actionable recruiter tactics.</rationale>
+      <sample_text>
+        "Capability Deficit: BFSI Solution Architects (10+ yrs experience, CXO advisory).
+        - Coimbatore Reality: Local pool is constrained (~80–120 total addressable architects in city limits, predominantly tied to Cognizant CBE, Bosch, and Cameron/SLB). Active availability is &lt;8% with high compensation lock-in (₹38–48 LPA).
+        - Recommended Sourcing Hub: Kochi (Kakkenad Infopark Corridor) + Secondary Intra-State Feeder: Trichy / Madurai for enterprise delivery leads.
+        - Talent Bandwidth: ~450–600 eligible enterprise architects across UST, IBS Software, Cognizant Kochi, and Allianz Technology; plus ~70–110 senior architects in Madurai/Trichy (HCLTech Madurai, Vuram/WNS).
+        - Cost Arbitrage: Kochi medians sit at ₹32–42 LPA for 10–14 YOE (8–14% discount vs. Chennai, 22–28% vs. Bengaluru); Trichy/Madurai mid-senior profiles offer a 15–20% discount against Chennai baselines.
+        - Relocation Behavior: High affinity for Western Tamil Nadu among candidates originating from Palakkad, Thrissur, and Ernakulam districts (2.5 to 4.5 hours via Vande Bharat / Intercity Express or NH 544), and near-zero cultural friction for candidates from Salem/Trichy (2 to 3.5 hours via NH 544 / NH 81). Offer-to-Join (OTJ) ratio benchmarks at 68% when hybrid flexibility (e.g., 3 days on-site, 2 days remote) is offered, vs. 34% for pure 5-day on-site.
+        - Target Feeder Companies: IBS Software (Travel/BFSI), UST Global, Tata Elxsi (Connected Car/Infotainment), Mindcurv, HCLTech Madurai, Vuram/WNS Trichy."
+      </sample_text>
+    </positive_exemplar>
+  </multi_shot_calibration>
+
+  <research_execution_workflow>
+    <phase id="PHASE-1">
+      <name>Requirement Decomposition &amp; Skill Taxonomy Engineering</name>
+      <tasks>
+        <task id="T1.1">Parse the 376 requisitions and group them into normalized seniority tiers: Junior (1-3 yrs), Mid-Senior (4-7 yrs), Lead/Principal (8-11 yrs), and Enterprise Architect/Executive (12+ yrs).</task>
+        <task id="T1.2">Map specific prerequisite combinations that heighten hiring friction (e.g., '.NET + Azure AI + Event-Driven Architecture' or 'BFSI Solution Architect + CXO Presales').</task>
+      </tasks>
+    </phase>
+
+    <phase id="PHASE-2">
+      <name>Coimbatore Local Talent Landscape &amp; Deficit Audit</name>
+      <tasks>
+        <task id="T2.1">Audit CBE's Local Supply Strengths: Detail roles where CBE has deep, self-sustaining talent pools (e.g., Core Java/.NET, Manual &amp; Selenium QA, Embedded systems, IT Service Desk, BPO/Operations) driven by local campuses and established employers (Cognizant, Bosch, Wipro, Cameron, Pricol, KGISL).</task>
+        <task id="T2.2">Audit CBE's Structural Deficits: Identify where local supply breaks down (e.g., Microsoft Fabric/Azure AI squads, ServiceNow specialized implementation engineers, presales Solution Architects with Tier-1 consulting background).</task>
+        <task id="T2.3">Quantify the Talent Scarcity Index (Scale 1-10) for each requirement cluster in Coimbatore, factoring in Time-to-Fill (TTF) and local market depth.</task>
+      </tasks>
+    </phase>
+
+    <phase id="PHASE-3">
+      <name>Comparative Feeder Market Benchmarking (Kerala, Metros &amp; Tier-2 TN Feeder Hubs)</name>
+      <instructions>
+        For every identified skill deficit in Coimbatore, evaluate candidate feeder locations across three tiers:
+        1. Kerala Feeder Corridors: Kochi (Infopark / SmartCity) and Trivandrum (Technopark).
+        2. Tier-1 Metros: Chennai (OMR / Guindy / Ambattur) and Bengaluru (Whitefield / Electronic City / ORR).
+        3. Emerging Tier-2 Tamil Nadu Feeder Hubs: Evaluate the top 2–3 high-gravity intra-state feeder markets—specifically Trichy (Navalpattu ELCOT / NIT &amp; Tier-2 services corridor), Salem (Jagirammapalayam ELCOT / Sona / NH 544 West TN corridor), and Madurai (Vadapalanji ELCOT / HCLTech &amp; Honeywell corridor)—or dynamically determine the optimal secondary TN feeder city based on skill depth, campus concentration, and lower cost-arbitrage / high relocation willingness to CBE.
+      </instructions>
+      <dimension_matrix>
+        <dimension id="DIM-1" name="Cost &amp; Compensation Arbitrage">
+          <metrics>
+            - Median Base CTC by YOE (3-5 yrs, 6-9 yrs, 10-14 yrs) across Metros vs. Kochi vs. Tier-2 TN (Trichy, Salem, Madurai).
+            - Average Expected Hike % to induce lateral moves to Coimbatore.
+            - Total Cost to Hire (relocation allowance + notice buyouts).
+            - Cost variance percentage relative to Coimbatore benchmarks.
+          </metrics>
+        </dimension>
+        <dimension id="DIM-2" name="Skill Depth &amp; Project Complexity">
+          <metrics>
+            - Tier-1 vs. Tier-2/3 consulting presence across feeder markets.
+            - Exposure to enterprise-grade production environments (e.g., Global BFSI, Healthcare, Modern SaaS) vs. maintenance/legacy support.
+            - Code-level engineering maturity (System design, microservices, cloud-native frameworks, AI/ML adoption).
+          </metrics>
+        </dimension>
+        <dimension id="DIM-3" name="Bandwidth &amp; Talent Pool Depth">
+          <metrics>
+            - Estimated addressable headcount in target city for specific skills (Kochi, Trivandrum, Chennai, Bengaluru, Trichy, Salem, Madurai).
+            - Active job-seeker liquidity vs. passive/entrenched talent.
+            - Competing employer density (risk of counter-offers and bidding wars).
+          </metrics>
+        </dimension>
+        <dimension id="DIM-4" name="Behavioral &amp; Relocation Dynamics">
+          <metrics>
+            - Relocation Propensity Score to Coimbatore (Low/Medium/High) by origin market.
+            - Commute &amp; Geographic Factors (highway travel times via NH 544 / NH 81 / NH 83, train corridors via Southern Railway, family relocation vs. bachelor weekly commute).
+            - Notice Period Compliance &amp; Attrition risk prior to Day 1 (Ghosting index).
+            - Realistic Offer-to-Join (OTJ) percentage for on-site vs. hybrid models.
+          </metrics>
+        </dimension>
+      </dimension_matrix>
+    </phase>
+
+    <phase id="PHASE-4">
+      <name>Institutional &amp; Lateral Feeder Channel Mapping</name>
+      <tasks>
+        <task id="T4.1">
+          Target Companies (Poaching/Sourcing List):
+          - Identify specific IT service firms, product engineering centers, and GCCs in Kochi, Trivandrum, Chennai, and emerging Tier-2 TN centers (e.g., Trichy: Vuram/WNS, Scientific Publishing; Madurai: HCLTech, Honeywell, Chella Software; Salem: Vee Technologies, Sona ecosystem) where candidates with identical stacks are clustered.
+          - Specify which companies operate with 60-90 day notice periods and where buyout openness exists.
+        </task>
+        <task id="T4.2">
+          Target Academic Institutions (Early Career &amp; Junior Lateral 1-3 YOE):
+          - Map premier and Tier-2 engineering colleges across Coimbatore/Western TN (e.g., PSG Tech, CIT, Kumaraguru, Amrita, Sri Krishna), Central/Southern TN (e.g., NIT Trichy, Saranathan, SASTRA, TCE Madurai, Sona College Salem, GCE Salem), and the Kerala Feeder Corridor (e.g., Model Engineering College Thrikkakara, SCMS, Rajagiri, GEC Thrissur, NSS Palakkad, TKM Kollam).
+          - Provide estimated circuit branch / CS intake capacities, curriculum alignment with modern cloud/AI stacks, and historical campus placement conversion data.
+        </task>
+      </tasks>
+    </phase>
+
+    <phase id="PHASE-5">
+      <name>Recruitment Analyst Operational Playbook</name>
+      <tasks>
+        <task id="T5.1">Construct a 'Sourcing Decision Tree' guiding recruiters: When to hire locally in CBE, when to tap intra-state Tier-2 TN feeders (Trichy, Salem, Madurai) for cost arbitrage and high retention, when to tap the Kerala corridor (Kochi/Trivandrum), and when to escalate to Tier-1 Metros (Bengaluru/Chennai/Remote).</task>
+        <task id="T5.2">Provide actionable Boolean &amp; Semantic Search strings for LinkedIn Recruiter / Naukri / Foundit for the top 3 hardest-to-fill profiles, incorporating regional geographical radius filters for TN &amp; Kerala feeder corridors.</task>
+        <task id="T5.3">Formulate concrete pitch scripts and value propositions tailored for both Kerala candidates and Tier-2 TN candidates (Trichy/Salem/Madurai) relocating to Coimbatore (focusing on cost-of-living parity, proximity, quality of life, schooling, highway/rail connectivity, and traffic differentials).</task>
+      </tasks>
+    </phase>
+  </research_execution_workflow>
+
+  <output_specifications>
+    <format_requirements>
+      Deliver the report in a highly organized, executive-grade document utilizing professional markdown tables, metric callouts, and clean section hierarchies.
+    </format_requirements>
+    <required_sections>
+      <section title="1. Executive Summary &amp; Demand Overview">
+        Synthesize the 376 requisitions into an executive-level skill distribution chart and highlight primary recruiting bottleneck zones.
+      </section>
+      <section title="2. Coimbatore Local Supply vs. Deficit Matrix">
+        Comprehensive comparison table: [Demand Cluster | Requisition Count | CBE Local Depth (High/Med/Low) | Scarcity Index (1-10) | Root Cause of Deficit].
+      </section>
+      <section title="3. Feeder Hub Comparative Analysis (Kochi, Metros &amp; Tier-2 TN Feeders)">
+        Detailed evaluation table breaking down Coimbatore vs. Kochi vs. Trivandrum vs. Chennai vs. Bengaluru vs. Top Tier-2 TN Feeder Cities (Trichy, Salem, Madurai, or skill-dynamically selected TN cities) across Cost, Skill Depth, Bandwidth, and Behavior.
+      </section>
+      <section title="4. Lateral Sourcing Target Directory">
+        Structured company target lists segmented by technology cluster (e.g., ServiceNow squads, Data/Fabric squads, BFSI Architecture) across Kerala, Chennai/Bengaluru, and Tier-2 TN hubs.
+      </section>
+      <section title="5. Academic Pipeline &amp; Junior Talent Engine">
+        College feeder matrix across Western TN, Central/Southern TN (NIT Trichy, TCE Madurai, Sona Salem, SASTRA), and Kerala with NIRF brackets, annual CS/IT graduating batch sizes, and specialization focus.
+      </section>
+      <section title="6. Actionable Sourcing Playbook for Talent Acquisition">
+        Recruiter-ready operational guide including multi-tier decision rules (CBE vs. Tier-2 TN vs. Kerala vs. Metros), wage negotiation guardrails, and candidate pitch strategies.
+      </section>
+    </required_sections>
+    <citation_protocol>
+      Every quantitative estimate and institutional fact must be cited inline using the format:
+      `[Source: Real Estate / Tech Park Census / Wage Survey / Educational Authority | Year | Key Metric Quote]`
+    </citation_protocol>
+  </output_specifications>
+</research_mission>
